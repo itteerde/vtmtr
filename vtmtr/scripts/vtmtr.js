@@ -1,7 +1,7 @@
 var start_time = performance.now();
 console.log("tablerules is loading.");
 
-const MODULE_SCOPE = "dhtr";
+const MODULE_SCOPE = "vtmtr";
 
 class TRUtils {
 
