@@ -1,0 +1,4 @@
+#token-hud .status-effects {
+    grid-template-columns: repeat(6, 25px);
+    width: 150px;
+  }
