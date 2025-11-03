@@ -42,9 +42,71 @@
             "type": "Macro",
             "system": "vtm5e",
             "flags":{}
+        },
+        {
+            "name": "vtm-advantages",
+            "label": "Advantages",
+            "path": "packs/vtm_advantages",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
+            "name": "vtm-clans",
+            "label": "Clans",
+            "path": "packs/vtm_clans",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
+            "name": "vtm-disciplines",
+            "label": "Disciplines",
+            "path": "packs/vtm_disciplines",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
+            "name": "vtm-equipment",
+            "label": "Equipment",
+            "path": "packs/vtm_equipment",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
+            "name": "vtm-flaws",
+            "label": "Flaws",
+            "path": "packs/vtm_flaws",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
+            "name": "vtm-predatortypes",
+            "label": "Predator Types",
+            "path": "packs/vtm_predatortypes",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
         }
     ],
     "packFolders": [
+        {
+            "name": "VtM",
+            "sorting": "a",
+            "color": "#ff0000",
+            "packs": [
+                "vtm-advantages",
+                "vtm-clans",
+                "vtm-disciplines",
+                "vtm-equipment",
+                "vtm-flaws",
+                "vtm-predatortypes"
+            ],
+            "folders":[]
+        },
         {
           "name": "Tablerules",
           "sorting": "a",
