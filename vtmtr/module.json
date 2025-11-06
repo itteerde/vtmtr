@@ -7,7 +7,7 @@
             "name": "Umbratica"
         }
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "compatibility":{
         "minimum": "13",
         "verified": "13.347"
@@ -52,6 +52,22 @@
             "flags":{}
         },
         {
+            "name": "vtm-backgrounds",
+            "label": "Backgrounds",
+            "path": "packs/vtm_backgrounds",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
+            "name": "vtm-boons",
+            "label": "Boons",
+            "path": "packs/vtm_boons",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
             "name": "vtm-clans",
             "label": "Clans",
             "path": "packs/vtm_clans",
@@ -84,6 +100,14 @@
             "flags":{}
         },
         {
+            "name": "vtm-merits",
+            "label": "Merits",
+            "path": "packs/vtm_merits",
+            "type": "Item",
+            "system": "vtm5e",
+            "flags":{}
+        },
+        {
             "name": "vtm-predatortypes",
             "label": "Predator Types",
             "path": "packs/vtm_predatortypes",
@@ -99,10 +123,13 @@
             "color": "#ff0000",
             "packs": [
                 "vtm-advantages",
+                "vtm-backgrounds",
+                "vtm-boons",
                 "vtm-clans",
                 "vtm-disciplines",
                 "vtm-equipment",
                 "vtm-flaws",
+                "vtm-merits",
                 "vtm-predatortypes"
             ],
             "folders":[]
@@ -122,7 +149,7 @@
         ],
     "url": "https://github.com/itteerde/vtmtr/",
     "manifest": "https://raw.githubusercontent.com/itteerde/vtmtr/main/vtmtr/module.json",
-    "download": "https://github.com/itteerde/vtmtr/releases/download/0.0.1/vtmtr.zip",
+    "download": "https://github.com/itteerde/vtmtr/releases/download/0.0.2/vtmtr.zip",
     "relationships":{
         "systems": [
             {
