@@ -22,7 +22,7 @@
         {
             "name": "tr-items",
             "label": "TR Items",
-            "path": "packs/items",
+            "path": "packs/tr-items",
             "type": "Item",
             "system": "wod5e",
             "flags":{}
@@ -30,15 +30,15 @@
         {
             "name": "tr-macros-gm",
             "label": "TR Macros GM",
-            "path": "packs/macros_gm",
+            "path": "packs/tr-macros-gm",
             "type": "Macro",
             "system": "wod5e",
             "flags":{}
         },
         {
-            "name": "tr-players",
+            "name": "tr-macros-players",
             "label": "TR Macros Players",
-            "path": "packs/macros_players",
+            "path": "packs/tr-macros-players",
             "type": "Macro",
             "system": "wod5e",
             "flags":{}
