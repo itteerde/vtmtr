@@ -20,27 +20,27 @@
     ],
     "packs":[
         {
-            "name": "tablerules-items",
+            "name": "tr-items",
             "label": "TR Items",
             "path": "packs/items",
             "type": "Item",
-            "system": "vtm5e",
+            "system": "wod5e",
             "flags":{}
         },
         {
-            "name": "tablerules-macros-gm",
+            "name": "tr-macros-gm",
             "label": "TR Macros GM",
             "path": "packs/macros_gm",
             "type": "Macro",
-            "system": "vtm5e",
+            "system": "wod5e",
             "flags":{}
         },
         {
-            "name": "tablerules-macros-players",
+            "name": "tr-players",
             "label": "TR Macros Players",
             "path": "packs/macros_players",
             "type": "Macro",
-            "system": "vtm5e",
+            "system": "wod5e",
             "flags":{}
         }
     ],
@@ -50,9 +50,9 @@
           "sorting": "a",
           "color": "#ff0000",
           "packs": [
-            "tablerules-items",
-            "tablerules-macros-gm",
-            "tablerules-macros-players"
+            "tr-items",
+            "tr-macros-gm",
+            "tr-macros-players"
             ],
           "folders": [
           ]
