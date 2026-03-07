@@ -273,7 +273,7 @@ Hooks.on("ready", function () {
         }
     }
 
-    CONFIG.statusEffects.push({ icon: 'systems/vtm5e/assets/icons/dice/vampire/success.png', id: 'discipline_used', name: 'Discipline Used' });
+    CONFIG.statusEffects.push({ icon: 'systems/wod5e/assets/icons/dice/vampire/success.png', id: 'discipline_used', name: 'Discipline Used' });
     CONFIG.statusEffects.push({ icon: 'icons/svg/cancel.svg', id: 'turn_taken', name: 'Turn Taken' });
 });
 
