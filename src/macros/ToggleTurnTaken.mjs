@@ -1,0 +1,1 @@
+game.user.character.toggleStatusEffect('turn_taken')

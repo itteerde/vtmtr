@@ -1,4 +1,15 @@
+/*
 #token-hud .status-effects {
     grid-template-columns: repeat(6, 25px);
     width: 150px;
   }
+*/
+
+#token-hud .status-effects {
+    --effect-columns: 6;
+    --effect-size: 24px;
+    display: grid;
+    grid-template-columns: repeat(var(--effect-columns), var(--effect-size));
+    padding: 3px;
+    gap: 3px;
+}

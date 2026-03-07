@@ -1,0 +1,1 @@
+game.user.character.toggleStatusEffect('discipline_used')

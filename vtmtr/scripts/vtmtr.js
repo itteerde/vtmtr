@@ -273,7 +273,8 @@ Hooks.on("ready", function () {
         }
     }
 
-    //CONFIG.statusEffects.push({ icon: 'modules/tablerules/icons/statuses/hidden.svg', id: 'hidden', label: 'Hidden' });
+    CONFIG.statusEffects.push({ icon: 'systems/vtm5e/assets/icons/dice/vampire/success.png', id: 'discipline_used', name: 'Discipline Used' });
+    CONFIG.statusEffects.push({ icon: 'icons/svg/cancel.svg', id: 'turn_taken', name: 'Turn Taken' });
 });
 
 console.log(`Tablerules has been loaded (${performance.now() - start_time}ms).`);
