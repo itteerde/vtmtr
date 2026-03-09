@@ -62,28 +62,47 @@ if (pasted.match(/Ambition:\s*([\s\S]*?)\s*Convictions/)) {
 }
 
 if (pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)) {
-    character.system.headers.touchstones = 'Convictions: ' + pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)[1];
+    character.system.headers.touchstones = `<div><b>Convictions: </b> ${pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)[1]}</div>`;
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Convictions' not found, skipping.`));
 }
 
 if (pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)) {
-    character.system.headers.touchstones += `<div><b>Touchstones: </b>' ${pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)[1]}</div>`;
+    character.system.headers.touchstones += `<div><b>Touchstones: </b> ${pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)[1]}</div>`;
 } else {
-    console.log(color(consoleColors.yellow, `WARNING: 'Convictions' not found, skipping.`));
+    console.log(color(consoleColors.yellow, `WARNING: 'Touchstones' not found, skipping.`));
 }
+
+if (pasted.match(/Humanity:\s*(.*)/)) {
+    character.system.humanity.value = parseInt(pasted.match(/Humanity:\s*(.*)/)[1]);
+} else {
+    console.log(color(consoleColors.yellow, `WARNING: 'Humanity' not found, skipping.`));
+}
+
+if (pasted.match(/Generation:\s*(.*)/)) {
+    character.system.headers.generation = pasted.match(/Generation:\s*(.*)/)[1];
+} else {
+    console.log(color(consoleColors.yellow, `WARNING: 'Generation' not found, skipping.`));
+}
+
+if (pasted.match(/Blood Potency:\s*(.*)/)) {
+    character.system.blood.potency = parseInt(pasted.match(/Blood Potency:\s*(.*)/)[1]);
+} else {
+    console.log(color(consoleColors.yellow, `WARNING: 'Blood Potency' not found, skipping.`));
+}
+
+if (pasted.match(/Strength\s*([\s\S]*?)\s*, Dexterity/)) {
+    character.system.attributes[strength.value] = parseInt(pasted.match(/Strength\s*([\s\S]*?)\s*, Dexterity/)[1]);
+} else {
+    console.log(color(consoleColors.yellow, `WARNING: 'Strength' not found, skipping.`));
+}
+
+console.log(character.system.attributes)
 // will need /Skills:\s*([\s\S]*?)\s*Disciplines/
 
 await fs.writeFile('./src/spcimporter/import.json', JSON.stringify(character));
 
 /*
-Convictions: Make sure they know you’re better
-than them
-Touchstones: Harry Magnotta — sadistic nurse at
-Lakeshore Hospital
-Humanity: 2
-Generation: 8th
-Blood Potency: 3
 Attributes: Strength 3, Dexterity 4, Stamina 2;
 Charisma 5, Manipulation 4, Composure 3; Intelligence
 3, Wits 4, Resolve 3
