@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
 for (const a of process.argv) {
-    if (a.toLocaleLowerCase().startsWith("--help")) {
+    if (a.toLocaleLowerCase().startsWith("--help") || a.toLocaleLowerCase().startsWith("-help")) {
 
         console.log(color(consoleColors.green, `so glad you found the help, nothing helpful here.`));
         process.exit();
