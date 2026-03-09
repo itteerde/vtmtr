@@ -68,7 +68,7 @@ if (pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)) {
 }
 
 if (pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)) {
-    character.system.headers.touchstones += 'Touchstones: ' pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)[1];
+    character.system.headers.touchstones += `<div><b>Touchstones: </b>' ${pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)[1]}</div>`;
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Convictions' not found, skipping.`));
 }
