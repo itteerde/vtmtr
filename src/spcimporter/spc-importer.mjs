@@ -12,4 +12,6 @@ if (pasted.match(/Sire:\s*(.*)/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'sire' not found, skipping.`));
 }
 
+// will need /Skills:\s*([\s\S]*?)\s*Disciplines/
+
 await fs.writeFile('./src/spcimporter/import.json', JSON.stringify(character));
