@@ -395,7 +395,8 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
             const skill = s.split(" ");
-            skills[skill[0]].value = skill[skill.length - 1]
+            console.log(skill);
+            skills[skill[0].toLocaleLowerCase()].value = parseInt(skill[skill.length - 1]);
         }
     }
 
