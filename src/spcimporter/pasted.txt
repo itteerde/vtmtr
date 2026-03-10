@@ -1,22 +1,21 @@
-Sire: Tyrus
-Embraced: 1983 (Born 1942)
-Ambition: Don’t allow the masters beneath the
-ground to wake
-Convictions: Always keep the masters fed
-Touchstones: Ernie Head — an abusive Native
-elder to whom Lester is painfully linked
-Humanity: 6
-Generation: 8th
-Blood Potency: 2
-Attributes: Strength 3, Dexterity 3, Stamina 2;
-Charisma 1, Manipulation 3, Composure 3; Intelligence
-1, Wits 4, Resolve 3
-Secondary Attributes: Health 5, Willpower 6
-Skills: Brawl 2, Drive (Motorbike) 3, Firearms 1,
-Larceny (Bypassing Security) 3, Stealth 1, Survival
-(Homeless) 4; Animal Ken (Urban Scavengers) 4,
-Intimidation (Stickups) 2, Streetwise 3, Subterfuge
-2; Awareness 2, Investigation 1, Occult 3, Science
-1, Technology (Repair) 3
-Disciplines: Animalism 4
+Sire: Kamilah
+Embraced: 2010 (Born 1993)
+Ambition: I will claim the burners as my herd and
+mine alone
+Convictions: Never blindly follow orders
+Touchstones: Basil — a local burner who has
+welcomed Rowan into her tribe
+Humanity: 7
+Generation: 10th
+Blood Potency: 1
+Attributes: Strength 3, Dexterity 3, Stamina 4;
+Charisma 3, Manipulation 1, Composure 2; Intelligence
+2, Wits 3, Resolve 4
+Secondary Attributes: Health 7, Willpower 6
+Skills: Athletics (Climbing) 4, Brawl 1, Drive 2, Larceny
+1, Stealth (Camouflage) 3, Survival 3; Animal
+Ken (Bats) 4, Insight 2, Intimidation 2, Performance
+(Contortion) 4, Persuasion 3, Streetwise 2, Subterfuge
+1; Awareness 3, Medicine 1, Science 1
+Disciplines: Animalism 3, Potence 1
 EndOfFile
