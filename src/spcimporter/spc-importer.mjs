@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
-const CURRENT_DATE = new Date('2026-01-01')
+const CURRENT_DATE = new Date('2026-01-01');
+const VERSION = '5.3.14.1';
 
 /**
  * Reduces multiple consecutive whitespaces to a single space.
@@ -15,15 +16,222 @@ function collapseWhitespace(str) {
 for (const a of process.argv) {
     if (a.toLocaleLowerCase().startsWith("--help") || a.toLocaleLowerCase().startsWith("-help")) {
 
-        console.log(color(consoleColors.green, `so glad you found the help, nothing helpful here.`));
+        const HELP_INDENT = '  ';
+
+        console.log(color(consoleColors.green, `SPC-Importer v${VERSION}`));
+        console.log();
+        console.log(color(consoleColors.gray, `${HELP_INDENT}https://github.com/itteerde/vtmtr/tree/main/src/spcimporter`));
+        console.log();
+        console.log(`${HELP_INDENT}Before importing new Actors, export a fresh template from FVTT for version compatibility.`)
+        console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update VERSION).`)
+        console.log();
         process.exit();
     }
 }
 
 const data = await fs.readFile('./src/spcimporter/v-template.json', 'utf-8');
 const character = JSON.parse(data);
-
 const pasted = await fs.readFile('./src/spcimporter/pasted.txt', 'utf-8');
+
+if (!VERSION.startsWith(character._stats.systemVersion)) {
+    console.log(color(consoleColors.red, `Incompatible versions, need to update importer (template: ${character._stats.systemVersion}, importer: ${VERSION}).`));
+    process.exit();
+}
+
+/**
+ * the whole skills subtree to be modified and written back. Arguably that not being present in the template indicates we are using a bad template and should improve that. Maybe change that later. The change would be trivial, just not assigning the literal here, but character.system.skills (where it will be written to after modifications, too).
+ */
+let skills = {
+    "athletics": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "animalken": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "academics": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "brawl": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "etiquette": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "awareness": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "craft": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "insight": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "finance": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "drive": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "intimidation": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "investigation": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "firearms": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "leadership": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "medicine": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "larceny": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "performance": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "occult": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "melee": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "persuasion": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "politics": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "stealth": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "streetwise": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "science": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "survival": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "subterfuge": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    },
+    "technology": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+    }
+};
 
 if (pasted.match(/Sire:\s*(.*)/)) {
     character.system.headers.sire = pasted.match(/Sire:\s*(.*)/)[1];
@@ -56,19 +264,19 @@ if (character.system.bio.dateof.birth !== undefined && character.system.bio.date
 }
 
 if (pasted.match(/Ambition:\s*([\s\S]*?)\s*Convictions/)) {
-    character.system.headers.ambition = pasted.match(/Ambition:\s*([\s\S]*?)\s*Convictions/)[1];
+    character.system.headers.ambition = collapseWhitespace(pasted.match(/Ambition:\s*([\s\S]*?)\s*Convictions/)[1]);
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Ambition' not found, skipping.`));
 }
 
 if (pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)) {
-    character.system.headers.touchstones = `<div><b>Convictions: </b> ${pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)[1]}</div>`;
+    character.system.headers.touchstones = `<div><b>Convictions: </b> ${collapseWhitespace(pasted.match(/Convictions:\s*([\s\S]*?)\s*Touchstones/)[1])}</div>`;
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Convictions' not found, skipping.`));
 }
 
 if (pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)) {
-    character.system.headers.touchstones += `<div><b>Touchstones: </b> ${pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)[1]}</div>`;
+    character.system.headers.touchstones += `<div><b>Touchstones: </b> ${collapseWhitespace(pasted.match(/Touchstones:\s*([\s\S]*?)\s*Humanity/)[1])}</div>`;
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Touchstones' not found, skipping.`));
 }
@@ -160,11 +368,13 @@ if (pasted.match(/Willpower\s*([\s\S]*?)\s*Skills:/)) {
 //ToDo Athletics to Larceny
 
 if (pasted.match(/Melee\s*([\s\S]*?)\s*,/)) {
-    character.system.skills = { melee: { value: parseInt(pasted.match(/Melee\s*([\s\S]*?)\s*,/)[1]) } };
+    skills.melee.value = parseInt(pasted.match(/Melee\s*([\s\S]*?)\s*,/)[1]);
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Melee' not found, skipping.`));
 }
 // will need /Skills:\s*([\s\S]*?)\s*Disciplines/
+
+character.system.skills = skills;
 
 await fs.writeFile('./src/spcimporter/import.json', JSON.stringify(character));
 
