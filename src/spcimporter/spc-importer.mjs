@@ -241,6 +241,77 @@ let skills = {
     }
 };
 
+let disciplines = {
+    "animalism": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "auspex": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "sorcery": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "celerity": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "ceremonies": {
+        "visible": false,
+        "selected": false
+    },
+    "dominate": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "fortitude": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "obfuscate": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "oblivion": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "potence": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "presence": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "protean": {
+        "visible": true,
+        "selected": false,
+        "value": 0
+    },
+    "rituals": {
+        "visible": false,
+        "selected": false
+    },
+    "alchemy": {
+        "visible": true,
+        "selected": true,
+        "value": 0
+    }
+}
+
 //background information
 
 if (pasted.match(/Sire:\s*(.*)/)) {
@@ -395,26 +466,36 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
             const skill = s.split(" ");
-            console.log(skill);
             skills[skill[0].toLocaleLowerCase()].value = parseInt(skill[skill.length - 1]);
         }
     }
 
 } else {
-    console.log(color(consoleColors.yellow, `WARNING: 'Melee' not found, skipping.`));
+    console.log(color(consoleColors.yellow, `WARNING: 'Skills' not found, skipping.`));
+}
+
+//disciplines
+
+if (pasted.match(/Disciplines:\s*([\s\S]*?)/)) {
+
+    const disciplineExamples = (pasted.match(/Disciplines:\s*([\s\S]*?)/)[1]).split(",");
+    for (let s of disciplineExamples) {
+        s = collapseWhitespace(s);
+        const discipline = s.split(" ");
+        console.log(discipline)
+        disciplines[discipline[0].toLocaleLowerCase()].value = parseInt(discipline[discipline.length - 1]);
+    }
+} else {
+    console.log(color(consoleColors.yellow, `WARNING: 'Disciplines' not found, skipping.`));
 }
 
 // will need /Skills:\s*([\s\S]*?)\s*Disciplines/
 
 character.system.skills = skills;
+character.system.disciplines = disciplines;
 
 await fs.writeFile('./src/spcimporter/import.json', JSON.stringify(character));
 
 /*
-Skills: Melee 1, Stealth 4; Etiquette 4, Insight
-(Fears) 3, Intimidation 3, Performance (Acting) 5,
-Persuasion 2, Subterfuge (Sincerity) 4; Awareness
-2, Investigation 2, Medicine (Psychological Treatment)
-3, Politics 2
 Disciplines: Auspex 3, Dominate 4, Obfuscate 3,
 Presence 1*/
