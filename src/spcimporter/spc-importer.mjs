@@ -29,7 +29,7 @@ function splitSkillString(str) {
     }
     return {
         name: skillString.split(' ')[0],
-        specializations: specializationString.split(','),
+        specializations: specializationString === '' ? [] : specializationString.split(','),
         value: skillString.split(' ')[skillString.split(' ').length - 1]
     }
 }
