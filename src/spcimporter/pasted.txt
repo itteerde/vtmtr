@@ -1,23 +1,22 @@
-Sire: Maureen O’Leary
-Embraced: 1893 (Born 1877)
-Ambition: Prevent Lasombra entry into the Chicago
-Camarilla
-Convictions: Make sure they know you’re better
-than them
-Touchstones: Harry Magnotta — sadistic nurse at
-Lakeshore Hospital
-Humanity: 2
-Generation: 8th
-Blood Potency: 3
-Attributes: Strength 3, Dexterity 4, Stamina 2;
-Charisma 5, Manipulation 4, Composure 3; Intelligence
-3, Wits 4, Resolve 3
-Secondary Attributes: Health 5, Willpower 6
-Skills: Melee 1, Stealth 4; Etiquette 4, Insight
-(Fears) 3, Intimidation 3, Performance (Acting) 5,
-Persuasion 2, Subterfuge (Sincerity) 4; Awareness
-2, Investigation 2, Medicine (Psychological Treatment)
-3, Politics 2
-Disciplines: Auspex 3, Dominate 4, Obfuscate 3,
-Presence 1
+Sire: Cedrick Calhoun
+Embraced: 2005 (Born 1938)
+Ambition: Financially ruin the “failed Cams”
+Convictions: Always remain loyal to your superiors
+Touchstones: Rip Eldon — former private and
+similarly homeless veteran, who does not judge
+or question Wauneka’s horrifying devolution in
+appearance
+Humanity: 7
+Generation: 9th
+Blood Potency: 1
+Attributes: Strength 4, Dexterity 2, Stamina 4;
+Charisma 1, Manipulation 1, Composure 2; Intelligence
+2, Wits 4, Resolve 4
+Secondary Attributes: Health 7, Willpower 6
+Skills: Brawl 2, Firearms (Rifle) 3, Melee 1, Larceny
+(Surveillance) 3, Stealth (Camouflage) 4, Survival
+(Warzones) 4; Insight 3, Intimidation 2, Streetwise
+(Homeless Community) 4, Subterfuge 2; Awareness
+(Listening) 4, Investigation 2, Medicine 2
+Disciplines: Auspex 1, Animalism 1, Potence 3
 EndOfFile

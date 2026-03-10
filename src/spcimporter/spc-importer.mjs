@@ -14,6 +14,27 @@ function collapseWhitespace(str) {
 }
 
 /**
+ * Returns an object with three properties: skill name, specialization, and skill value. 
+ * @param {*} str 
+ * @returns 
+ */
+function splitSkillString(str) {
+    const openingBracket = str.indexOf('(');
+    const closingBracket = str.indexOf(')');
+    let specializationString = '';
+    let skillString = str;
+    if (openingBracket !== -1) {
+        specializationString = str.slice(openingBracket + 1, closingBracket);
+        skillString = str.slice(0, openingBracket) + str.slice(closingBracket + 1, str.length)
+    }
+    return {
+        specializations: specializationString.split(','),
+        name: skillString.split(' ')[0],
+        value: skillString.split(' ')[skillString.split(' ').length - 1]
+    }
+}
+
+/**
  * Process command line arguments.
  */
 for (const a of process.argv) {
@@ -241,76 +262,7 @@ let skills = {
     }
 };
 
-let disciplines = {
-    "animalism": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "auspex": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "sorcery": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "celerity": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "ceremonies": {
-        "visible": false,
-        "selected": false
-    },
-    "dominate": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "fortitude": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "obfuscate": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "oblivion": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "potence": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "presence": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "protean": {
-        "visible": true,
-        "selected": false,
-        "value": 0
-    },
-    "rituals": {
-        "visible": false,
-        "selected": false
-    },
-    "alchemy": {
-        "visible": true,
-        "selected": true,
-        "value": 0
-    }
-}
+let disciplines = {};
 
 //background information
 
@@ -474,15 +426,21 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'Skills' not found, skipping.`));
 }
 
+console.log(splitSkillString('Streetwise (Homeless Community) 4'))
+
 //disciplines
 
-if (pasted.match(/Disciplines:\s*([\s\S]*?)/)) {
+if (pasted.match(/Disciplines:\s*([\s\S]*?)\s*EndOfFile/)) {
 
-    const disciplineExamples = (pasted.match(/Disciplines:\s*([\s\S]*?)/)[1]).split(",");
+    const disciplineExamples = (pasted.match(/Disciplines:\s*([\s\S]*?)\s*EndOfFile/)[1]).split(",");
     for (let s of disciplineExamples) {
         s = collapseWhitespace(s);
         const discipline = s.split(" ");
-        console.log(discipline)
+        disciplines[discipline[0].toLocaleLowerCase()] = {
+            "visible": true,
+            "selected": false,
+            "value": 0
+        };
         disciplines[discipline[0].toLocaleLowerCase()].value = parseInt(discipline[discipline.length - 1]);
     }
 } else {
