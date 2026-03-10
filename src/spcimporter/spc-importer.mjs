@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
-const CURRENT_DATE = new Date('2026-01-01');
+const CURRENT_DATE = new Date('2026-01-01'); // the date in world, used to calculate age relative to the game world
 const VERSION = '5.3.14.1';
 
 /**
@@ -13,7 +13,14 @@ function collapseWhitespace(str) {
     return str.trim().replace(/\s+/g, ' ');
 }
 
+/**
+ * Process command line arguments.
+ */
 for (const a of process.argv) {
+
+    /**
+     * Display help, for both Unix and Windows conventions (not old windows/DOS though).
+     */
     if (a.toLocaleLowerCase().startsWith("--help") || a.toLocaleLowerCase().startsWith("-help")) {
 
         const HELP_INDENT = '  ';
@@ -25,6 +32,7 @@ for (const a of process.argv) {
         console.log(`${HELP_INDENT}Before importing new Actors, export a fresh template from FVTT for version compatibility.`)
         console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update VERSION).`)
         console.log();
+
         process.exit();
     }
 }
