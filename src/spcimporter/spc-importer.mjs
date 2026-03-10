@@ -417,16 +417,28 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
         const skillsGroup = g.split(",");
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
-            const skill = s.split(" ");
-            skills[skill[0].toLocaleLowerCase()].value = parseInt(skill[skill.length - 1]);
+            const skill = splitSkillString(s);
+            console.log(skill)
+            skills[skill.name.toLocaleLowerCase()].value = parseInt(skill.value);
+            if (skill.specializations.length > 0) {
+                skills[skill.name.toLocaleLowerCase()].bonuses = [];
+                for (const bonus of skill.specializations) {
+                    skills[skill.name.toLocaleLowerCase()].bonuses.push({
+                        source: bonus,
+                        value: 1,
+                        paths: [
+                            'skills.' + skill.name.toLocaleLowerCase()
+                        ],
+                        "displayWhenInactive": true
+                    })
+                }
+            }
         }
     }
 
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Skills' not found, skipping.`));
 }
-
-console.log(splitSkillString('Streetwise (Homeless Community) 4'))
 
 //disciplines
 
