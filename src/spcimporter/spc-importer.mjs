@@ -43,7 +43,7 @@ function splitSkillString(str) {
  * @param {String} replacement 
  * @returns 
  */
-function replaceBetween(s, opening, closing, original, replacement) {
+function replaceBetweenOld(s, opening, closing, original, replacement) {
 
     let replace = false;
     let r = s;
@@ -64,6 +64,39 @@ function replaceBetween(s, opening, closing, original, replacement) {
     }
 
     return r;
+}
+
+/**
+ * Optimized replacement for multi-character delimiters
+ */
+function replaceBetween(s, opening, closing, original, replacement) {
+    let result = '';
+    let lastIndex = 0;
+    let openIndex = s.indexOf(opening);
+
+    while (openIndex !== -1) {
+        // 1. Add everything before the opening delimiter
+        result += s.substring(lastIndex, openIndex + opening.length);
+
+        // 2. Find the closing delimiter
+        let closeIndex = s.indexOf(closing, openIndex + opening.length);
+
+        // If no closing tag is found, treat the rest of the string as "outside"
+        if (closeIndex === -1) break;
+
+        // 3. Extract the inner content and replace the target string
+        // We use a Regex with the 'g' flag for global replacement inside the block
+        let innerContent = s.substring(openIndex + opening.length, closeIndex);
+        result += innerContent.split(original).join(replacement);
+
+        // 4. Update indices to move past the closing tag
+        lastIndex = closeIndex;
+        openIndex = s.indexOf(opening, lastIndex);
+    }
+
+    // Add any remaining trailing text
+    result += s.substring(lastIndex);
+    return result;
 }
 
 /**
