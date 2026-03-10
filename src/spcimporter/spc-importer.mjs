@@ -3,6 +3,7 @@ import { color, consoleColors } from '../lib/colorize.mjs';
 
 const CURRENT_DATE = new Date('2026-01-01'); // the date in world, used to calculate age relative to the game world
 const VERSION = '5.3.14.1';
+let DEBUG_LEVEL = 0;
 
 /**
  * Reduces multiple consecutive whitespaces to a single space.
@@ -27,8 +28,12 @@ function splitSkillString(str) {
         specializationString = str.slice(openingBracket + 1, closingBracket);
         skillString = str.slice(0, openingBracket) + str.slice(closingBracket + 1, str.length)
     }
+
+    let name = skillString.indexOf('(') === -1 ? skillString.slice(0, skillString.length - 1) : skillString.slice(0, skillString.indexOf('(')); // was skillString.split(' ')[0]
+    name = name.replaceAll(' ', '');
+
     return {
-        name: skillString.split(' ')[0],
+        name: name,
         specializations: specializationString === '' ? [] : specializationString.split('|'),
         value: skillString.split(' ')[skillString.split(' ').length - 1]
     }
@@ -99,6 +104,34 @@ function replaceBetween(s, opening, closing, original, replacement) {
     return result;
 }
 
+function replaceBetweenRegex(s, opening, closing, original, replacement) {
+    // 1. Escape 'original' so it's safe to use in a Regex pattern
+    const escapedOriginal = original.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escapedOriginal, 'g');
+
+    let result = '';
+    let lastIndex = 0;
+    let openIndex = s.indexOf(opening);
+
+    while (openIndex !== -1) {
+        // Add everything from the last match up to the opening tag
+        result += s.substring(lastIndex, openIndex + opening.length);
+
+        const closeIndex = s.indexOf(closing, openIndex + opening.length);
+        if (closeIndex === -1) break;
+
+        // 2. Extract the middle and use the 'g' (global) regex
+        const innerContent = s.substring(openIndex + opening.length, closeIndex);
+        result += innerContent.replace(regex, replacement);
+
+        // Move the pointer to the end of the closing tag
+        lastIndex = closeIndex;
+        openIndex = s.indexOf(opening, lastIndex);
+    }
+
+    return result + s.substring(lastIndex);
+}
+
 /**
  * Process command line arguments.
  */
@@ -120,6 +153,10 @@ for (const a of process.argv) {
         console.log();
 
         process.exit();
+    }
+
+    if (a.toLocaleLowerCase().startsWith("--debug") || a.toLocaleLowerCase().startsWith("-debug")) {
+        DEBUG_LEVEL = 3;
     }
 }
 
@@ -486,6 +523,7 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
             const skill = splitSkillString(s);
+            if (DEBUG_LEVEL > 0) console.log({ skill: skill });
             skills[skill.name.toLocaleLowerCase()].value = parseInt(skill.value);
             if (skill.specializations.length > 0) {
                 skills[skill.name.toLocaleLowerCase()].bonuses = [];
