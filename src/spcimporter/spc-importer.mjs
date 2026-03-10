@@ -486,7 +486,6 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
             const skill = splitSkillString(s);
-            console.log(skill)
             skills[skill.name.toLocaleLowerCase()].value = parseInt(skill.value);
             if (skill.specializations.length > 0) {
                 skills[skill.name.toLocaleLowerCase()].bonuses = [];
