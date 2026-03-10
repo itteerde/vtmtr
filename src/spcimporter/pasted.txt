@@ -20,4 +20,4 @@ Persuasion 2, Subterfuge (Sincerity) 4; Awareness
 3, Politics 2
 Disciplines: Auspex 3, Dominate 4, Obfuscate 3,
 Presence 1
-/*EOF*/
+EndOfFile
