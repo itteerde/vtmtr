@@ -1,22 +1,22 @@
-Sire: Cedrick Calhoun
-Embraced: 2005 (Born 1938)
-Ambition: Financially ruin the “failed Cams”
-Convictions: Always remain loyal to your superiors
-Touchstones: Rip Eldon — former private and
-similarly homeless veteran, who does not judge
-or question Wauneka’s horrifying devolution in
-appearance
-Humanity: 7
-Generation: 9th
-Blood Potency: 1
-Attributes: Strength 4, Dexterity 2, Stamina 4;
-Charisma 1, Manipulation 1, Composure 2; Intelligence
-2, Wits 4, Resolve 4
-Secondary Attributes: Health 7, Willpower 6
-Skills: Brawl 2, Firearms (Rifle, Pistol, Shotgun) 3, Melee 1, Larceny
-(Surveillance) 3, Stealth (Camouflage) 4, Survival
-(Warzones) 4; Insight 3, Intimidation 2, Streetwise
-(Homeless Community) 4, Subterfuge 2; Awareness
-(Listening) 4, Investigation 2, Medicine 2
-Disciplines: Auspex 1, Animalism 1, Potence 3
+Sire: Tyrus
+Embraced: 1983 (Born 1942)
+Ambition: Don’t allow the masters beneath the
+ground to wake
+Convictions: Always keep the masters fed
+Touchstones: Ernie Head — an abusive Native
+elder to whom Lester is painfully linked
+Humanity: 6
+Generation: 8th
+Blood Potency: 2
+Attributes: Strength 3, Dexterity 3, Stamina 2;
+Charisma 1, Manipulation 3, Composure 3; Intelligence
+1, Wits 4, Resolve 3
+Secondary Attributes: Health 5, Willpower 6
+Skills: Brawl 2, Drive (Motorbike) 3, Firearms 1,
+Larceny (Bypassing Security) 3, Stealth 1, Survival
+(Homeless) 4; Animal Ken (Urban Scavengers) 4,
+Intimidation (Stickups) 2, Streetwise 3, Subterfuge
+2; Awareness 2, Investigation 1, Occult 3, Science
+1, Technology (Repair) 3
+Disciplines: Animalism 4
 EndOfFile
