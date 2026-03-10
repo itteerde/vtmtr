@@ -374,6 +374,21 @@ if (pasted.match(/Willpower\s*([\s\S]*?)\s*Skills:/)) {
 }
 
 //ToDo Athletics to Larceny
+if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
+
+    const skillsGroups = (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)[1]).split(";");
+    for (const g of skillsGroups) {
+        const skillsGroup = g.split(",");
+        for (const s of skillsGroup) {
+            console.log(collapseWhitespace(s));
+        }
+    }
+
+} else {
+    console.log(color(consoleColors.yellow, `WARNING: 'Melee' not found, skipping.`));
+}
+
+
 
 if (pasted.match(/Melee\s*([\s\S]*?)\s*,/)) {
     skills.melee.value = parseInt(pasted.match(/Melee\s*([\s\S]*?)\s*,/)[1]);
