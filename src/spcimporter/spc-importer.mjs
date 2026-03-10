@@ -29,9 +29,41 @@ function splitSkillString(str) {
     }
     return {
         name: skillString.split(' ')[0],
-        specializations: specializationString === '' ? [] : specializationString.split(','),
+        specializations: specializationString === '' ? [] : specializationString.split('|'),
         value: skillString.split(' ')[skillString.split(' ').length - 1]
     }
+}
+
+/**
+ * 
+ * @param {String} s 
+ * @param {String} opening 
+ * @param {String} closing 
+ * @param {String} original 
+ * @param {String} replacement 
+ * @returns 
+ */
+function replaceBetween(s, opening, closing, original, replacement) {
+
+    let replace = false;
+    let r = s;
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === opening) {
+            replace = true;
+        }
+        if (s[i] === closing) {
+            replace = false;
+        }
+
+        if (replace && s[i] === original) {
+            r = r.slice(0, i);
+            r += replacement;
+            r += s.slice(i + 1);
+        }
+    }
+
+    return r;
 }
 
 /**
@@ -412,8 +444,11 @@ if (pasted.match(/Willpower\s*([\s\S]*?)\s*Skills:/)) {
 
 if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
 
-    const skillsGroups = (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)[1]).split(";");
-    for (const g of skillsGroups) {
+    let skillsGroups = (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)[1]);
+    skillsGroups = replaceBetween(skillsGroups, '(', ')', ',', '|');
+    skillsGroups = skillsGroups.split(";");
+    for (let g of skillsGroups) {
+        g = collapseWhitespace(g);
         const skillsGroup = g.split(",");
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
