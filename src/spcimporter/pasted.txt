@@ -13,7 +13,7 @@ Attributes: Strength 4, Dexterity 2, Stamina 4;
 Charisma 1, Manipulation 1, Composure 2; Intelligence
 2, Wits 4, Resolve 4
 Secondary Attributes: Health 7, Willpower 6
-Skills: Brawl 2, Firearms (Rifle) 3, Melee 1, Larceny
+Skills: Brawl 2, Firearms (Rifle, Pistol, Shotgun) 3, Melee 1, Larceny
 (Surveillance) 3, Stealth (Camouflage) 4, Survival
 (Warzones) 4; Insight 3, Intimidation 2, Streetwise
 (Homeless Community) 4, Subterfuge 2; Awareness
