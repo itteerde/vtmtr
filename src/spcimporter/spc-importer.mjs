@@ -15,8 +15,8 @@ function collapseWhitespace(str) {
 
 /**
  * Returns an object with three properties: skill name, specialization, and skill value. 
- * @param {*} str 
- * @returns 
+ * @param {String} str the skill string (line) to parse
+ * @returns the parsed object like {name: string, specialization: [string...], value: number}
  */
 function splitSkillString(str) {
     const openingBracket = str.indexOf('(');
@@ -28,8 +28,8 @@ function splitSkillString(str) {
         skillString = str.slice(0, openingBracket) + str.slice(closingBracket + 1, str.length)
     }
     return {
-        specializations: specializationString.split(','),
         name: skillString.split(' ')[0],
+        specializations: specializationString.split(','),
         value: skillString.split(' ')[skillString.split(' ').length - 1]
     }
 }
