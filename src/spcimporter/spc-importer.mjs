@@ -241,6 +241,8 @@ let skills = {
     }
 };
 
+//background information
+
 if (pasted.match(/Sire:\s*(.*)/)) {
     character.system.headers.sire = pasted.match(/Sire:\s*(.*)/)[1];
 } else {
@@ -295,6 +297,8 @@ if (pasted.match(/Humanity:\s*(.*)/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'Humanity' not found, skipping.`));
 }
 
+//strength of blood
+
 if (pasted.match(/Generation:\s*(.*)/)) {
     character.system.headers.generation = pasted.match(/Generation:\s*(.*)/)[1];
 } else {
@@ -306,6 +310,8 @@ if (pasted.match(/Blood Potency:\s*(.*)/)) {
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Blood Potency' not found, skipping.`));
 }
+
+//physical stats
 
 if (pasted.match(/Strength\s*([\s\S]*?)\s*, Dexterity/)) {
     character.system.attributes.strength = { value: parseInt(pasted.match(/Strength\s*([\s\S]*?)\s*, Dexterity/)[1]) };
@@ -325,6 +331,8 @@ if (pasted.match(/Stamina\s*([\s\S]*?)\s*;/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'Stamina' not found, skipping.`));
 }
 
+//social stats
+
 if (pasted.match(/Charisma\s*([\s\S]*?)\s*, Manipulation/)) {
     character.system.attributes.charisma = { value: parseInt(pasted.match(/Charisma\s*([\s\S]*?)\s*, Manipulation/)[1]) };
 } else {
@@ -342,6 +350,8 @@ if (pasted.match(/Composure\s*([\s\S]*?)\s*;/)) {
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Stamina' not found, skipping.`));
 }
+
+//mental stats
 
 if (pasted.match(/Intelligence\s*([\s\S]*?)\s*, Wits/)) {
     character.system.attributes.intelligence = { value: parseInt(pasted.match(/Intelligence\s*([\s\S]*?)\s*, Wits/)[1]) };
@@ -361,6 +371,8 @@ if (pasted.match(/Resolve\s*([\s\S]*?)\s*Secondary Attributes:/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'Resolve' not found, skipping.`));
 }
 
+//derived stats
+
 if (pasted.match(/Health\s*([\s\S]*?)\s*, Willpower/)) {
     character.system.health.max = parseInt(pasted.match(/Health\s*([\s\S]*?)\s*, Willpower/)[1]);
 } else {
@@ -373,14 +385,17 @@ if (pasted.match(/Willpower\s*([\s\S]*?)\s*Skills:/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'Willpower' not found, skipping.`));
 }
 
-//ToDo Athletics to Larceny
+//skills
+
 if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
 
     const skillsGroups = (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)[1]).split(";");
     for (const g of skillsGroups) {
         const skillsGroup = g.split(",");
-        for (const s of skillsGroup) {
-            console.log(collapseWhitespace(s));
+        for (let s of skillsGroup) {
+            s = collapseWhitespace(s);
+            const skill = s.split(" ");
+            skills[skill[0]].value = skill[skill.length - 1]
         }
     }
 
@@ -388,13 +403,6 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
     console.log(color(consoleColors.yellow, `WARNING: 'Melee' not found, skipping.`));
 }
 
-
-
-if (pasted.match(/Melee\s*([\s\S]*?)\s*,/)) {
-    skills.melee.value = parseInt(pasted.match(/Melee\s*([\s\S]*?)\s*,/)[1]);
-} else {
-    console.log(color(consoleColors.yellow, `WARNING: 'Melee' not found, skipping.`));
-}
 // will need /Skills:\s*([\s\S]*?)\s*Disciplines/
 
 character.system.skills = skills;
