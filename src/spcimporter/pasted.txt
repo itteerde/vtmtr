@@ -1,21 +1,23 @@
-Sire: Kamilah
-Embraced: 2010 (Born 1993)
-Ambition: I will claim the burners as my herd and
-mine alone
-Convictions: Never blindly follow orders
-Touchstones: Basil — a local burner who has
-welcomed Rowan into her tribe
-Humanity: 7
-Generation: 10th
-Blood Potency: 1
-Attributes: Strength 3, Dexterity 3, Stamina 4;
-Charisma 3, Manipulation 1, Composure 2; Intelligence
-2, Wits 3, Resolve 4
-Secondary Attributes: Health 7, Willpower 6
-Skills: Athletics (Climbing) 4, Brawl 1, Drive 2, Larceny
-1, Stealth (Camouflage) 3, Survival 3; Animal
-Ken (Bats) 4, Insight 2, Intimidation 2, Performance
-(Contortion) 4, Persuasion 3, Streetwise 2, Subterfuge
-1; Awareness 3, Medicine 1, Science 1
-Disciplines: Animalism 3, Potence 1
+Sire: Unknown
+Embraced: Circa 4000 BCE or far more recent
+Ambition: Erode Helena’s influence over the city
+Convictions: Always aim to restore the Mother’s
+Garden
+Touchstones: Mavis Blackwater — descendant
+and keeper of her people
+Humanity: 8
+Generation: Effectively 4th
+Blood Potency: 6
+Attributes: Strength 2, Dexterity 3, Stamina 5;
+Charisma 3, Manipulation 5, Composure 5; Intelligence
+5; Wits 4; Resolve 4
+Secondary Attributes: Health 8, Willpower 9
+Skills: Athletics 3, Brawl 4, Melee 2, Stealth (Plain
+Sight) 4, Survival (Underwater) 5; Animal Ken
+(Birds) 5, Etiquette 3, Insight 3, Intimidation (Age) 5,
+Leadership (Cultivars) 5, Persuasion 4, Subterfuge
+5; Awareness 4, Medicine (Fertility) 4, Occult (Lilith)
+5, Politics 3
+Disciplines: Auspex 5, Celerity 4, Dominate 3,
+Fortitude 5, Presence 4, Blood Sorcery 5
 EndOfFile
