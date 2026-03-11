@@ -551,14 +551,22 @@ if (pasted.match(/Disciplines:\s*([\s\S]*?)\s*EndOfFile/)) {
 
     const disciplineExamples = (pasted.match(/Disciplines:\s*([\s\S]*?)\s*EndOfFile/)[1]).split(",");
     for (let s of disciplineExamples) {
+        if (DEBUG_LEVEL > 0) console.log({ discipline: s });
         s = collapseWhitespace(s);
         const discipline = s.split(" ");
-        disciplines[discipline[0].toLocaleLowerCase()] = {
+
+        let name = discipline[0].toLocaleLowerCase();
+        if (DEBUG_LEVEL > 0) console.log({ discipline: s, name: name });
+        if (name === 'blood') {
+            name = 'sorcery';
+        }
+
+        disciplines[name] = {
             "visible": true,
             "selected": false,
             "value": 0
         };
-        disciplines[discipline[0].toLocaleLowerCase()].value = parseInt(discipline[discipline.length - 1]);
+        disciplines[name].value = parseInt(discipline[discipline.length - 1]);
     }
 } else {
     console.log(color(consoleColors.yellow, `WARNING: 'Disciplines' not found, skipping.`));
