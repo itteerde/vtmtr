@@ -1,10 +1,12 @@
 import fs from 'node:fs/promises';
+import { statSync } from 'node:fs';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
 const CURRENT_DATE = new Date('2026-01-01'); // the date in world, used to calculate age relative to the game world
 const CONFIG = {
     version: '5.3.14.1',
-    debug_level: 0
+    debug_level: 0,
+    force_download: false
 };
 
 /**
@@ -176,6 +178,7 @@ for (const a of process.argv) {
         console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update CONFIG.version).`)
         console.log();
         console.log(`${HELP_INDENT}--debug run with debugging output.`)
+        console.log(`${HELP_INDENT}--forceDownload forces downloading the manifest.`)
         console.log();
 
         process.exit();
@@ -184,12 +187,17 @@ for (const a of process.argv) {
     if (a.toLocaleLowerCase().startsWith("--debug") || a.toLocaleLowerCase().startsWith("-debug")) {
         CONFIG.debug_level = 3;
     }
-}
 
+    if (a.toLocaleLowerCase().startsWith("--forcedownload") || a.toLocaleLowerCase().startsWith("-forcedownload")) {
+        CONFIG.force_download = true;
+    }
+}
 
 const data = await fs.readFile('./src/spcimporter/v-template.json', 'utf-8');
 const character = JSON.parse(data);
 const pasted = await fs.readFile('./src/spcimporter/pasted.txt', 'utf-8');
+
+console.log(color(consoleColors.green, `SPC-Importer v${CONFIG.version}`));
 
 if (!CONFIG.version.startsWith(character._stats.systemVersion)) {
     console.log(color(consoleColors.red, `Incompatible versions, need to update importer (template: ${character._stats.systemVersion}, importer: ${CONFIG.version}).`));
@@ -198,7 +206,23 @@ if (!CONFIG.version.startsWith(character._stats.systemVersion)) {
 
 const MANIFEST_URL = 'https://raw.githubusercontent.com/WoD5E-Developers/wod5e/refs/heads/main/system.json';
 
-const manifest = JSON.parse(await fetchFileContent(MANIFEST_URL));
+let dateManifest = new Date('2000-01-01');
+if (CONFIG.debug_level > 0) console.log({ dateManifest: dateManifest });
+try {
+    await fs.access('./src/spcimporter/system.json');
+    dateManifest = statSync('./src/spcimporter/system.json').mtime;
+} catch (error) {
+    console.error(error);
+}
+let manifest = undefined;
+if (CONFIG.force_download || new Date() - dateManifest > (24 * 3600000)) {
+    manifest = JSON.parse(await fetchFileContent(MANIFEST_URL));
+    await fs.writeFile('./src/spcimporter/system.json', JSON.stringify(manifest));
+    console.log(color(consoleColors.gray, `${CONFIG.force_download ? 'forced manifest download' : 'manifest cached outdated'}, caching ${new Date()}.`));
+} else {
+    manifest = JSON.parse(await fs.readFile('./src/spcimporter/system.json', 'utf-8'));
+    console.log(color(consoleColors.gray, `manifest cached ${dateManifest}.`));
+}
 if (CONFIG.debug_level > 0) console.log(manifest);
 
 if (!CONFIG.version.startsWith(manifest.version)) {
@@ -206,8 +230,6 @@ if (!CONFIG.version.startsWith(manifest.version)) {
     console.log(color(consoleColors.gray, `see ${MANIFEST_URL}`));
     process.exit();
 }
-
-console.log(color(consoleColors.green, `SPC-Importer v${CONFIG.version}, manifest version ${manifest.version}`));
 
 /**
  * the whole skills subtree to be modified and written back. Arguably that not being present in the template indicates we are using a bad template and should improve that. Maybe change that later. The change would be trivial, just not assigning the literal here, but character.system.skills (where it will be written to after modifications, too).
