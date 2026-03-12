@@ -2,8 +2,10 @@ import fs from 'node:fs/promises';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
 const CURRENT_DATE = new Date('2026-01-01'); // the date in world, used to calculate age relative to the game world
-const VERSION = '5.3.14.1';
-let DEBUG_LEVEL = 0;
+const CONFIG = {
+    version: '5.3.14.1',
+    debug_level: 0
+};
 
 /**
  * Reduces multiple consecutive whitespaces to a single space.
@@ -133,6 +135,28 @@ function replaceBetweenRegex(s, opening, closing, original, replacement) {
 }
 
 /**
+ * Fetches file content from a URL and returns it as a string.
+ * @param {string} url - The remote file location.
+ * @returns {Promise<string>} - The file content.
+ */
+async function fetchFileContent(url) {
+    try {
+        const response = await fetch(url);
+
+        // Check if the request was successful (status 200-299)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Return the body content as a string
+        return await response.text();
+    } catch (error) {
+        console.error("Failed to fetch file:", error.message);
+        throw error;
+    }
+}
+
+/**
  * Process command line arguments.
  */
 for (const a of process.argv) {
@@ -144,30 +168,46 @@ for (const a of process.argv) {
 
         const HELP_INDENT = '  ';
 
-        console.log(color(consoleColors.green, `SPC-Importer v${VERSION}`));
+        console.log(color(consoleColors.green, `SPC-Importer v${CONFIG.version}`));
         console.log();
         console.log(color(consoleColors.gray, `${HELP_INDENT}https://github.com/itteerde/vtmtr/tree/main/src/spcimporter`));
         console.log();
         console.log(`${HELP_INDENT}Before importing new Actors, export a fresh template from FVTT for version compatibility.`)
-        console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update VERSION).`)
+        console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update CONFIG.version).`)
+        console.log();
+        console.log(`${HELP_INDENT}--debug run with debugging output.`)
         console.log();
 
         process.exit();
     }
 
     if (a.toLocaleLowerCase().startsWith("--debug") || a.toLocaleLowerCase().startsWith("-debug")) {
-        DEBUG_LEVEL = 3;
+        CONFIG.debug_level = 3;
     }
 }
+
 
 const data = await fs.readFile('./src/spcimporter/v-template.json', 'utf-8');
 const character = JSON.parse(data);
 const pasted = await fs.readFile('./src/spcimporter/pasted.txt', 'utf-8');
 
-if (!VERSION.startsWith(character._stats.systemVersion)) {
-    console.log(color(consoleColors.red, `Incompatible versions, need to update importer (template: ${character._stats.systemVersion}, importer: ${VERSION}).`));
+if (!CONFIG.version.startsWith(character._stats.systemVersion)) {
+    console.log(color(consoleColors.red, `Incompatible versions, need to update importer (template: ${character._stats.systemVersion}, importer: ${CONFIG.version}).`));
     process.exit();
 }
+
+const MANIFEST_URL = 'https://raw.githubusercontent.com/WoD5E-Developers/wod5e/refs/heads/main/system.json';
+
+const manifest = JSON.parse(await fetchFileContent(MANIFEST_URL));
+if (CONFIG.debug_level > 0) console.log(manifest);
+
+if (!CONFIG.version.startsWith(manifest.version)) {
+    console.log(color(consoleColors.red, `Incompatible versions, need to update importer (system manifest: ${manifest.version}, importer: ${CONFIG.version}).`));
+    console.log(color(consoleColors.gray, `see ${MANIFEST_URL}`));
+    process.exit();
+}
+
+console.log(color(consoleColors.green, `SPC-Importer v${CONFIG.version}, manifest version ${manifest.version}`));
 
 /**
  * the whole skills subtree to be modified and written back. Arguably that not being present in the template indicates we are using a bad template and should improve that. Maybe change that later. The change would be trivial, just not assigning the literal here, but character.system.skills (where it will be written to after modifications, too).
@@ -523,7 +563,7 @@ if (pasted.match(/Skills:\s*([\s\S]*?)\s*Disciplines/)) {
         for (let s of skillsGroup) {
             s = collapseWhitespace(s);
             const skill = splitSkillString(s);
-            if (DEBUG_LEVEL > 0) console.log({ skill: skill });
+            if (CONFIG.debug_level > 0) console.log({ skill: skill });
             skills[skill.name.toLocaleLowerCase()].value = parseInt(skill.value);
             if (skill.specializations.length > 0) {
                 skills[skill.name.toLocaleLowerCase()].bonuses = [];
@@ -551,12 +591,12 @@ if (pasted.match(/Disciplines:\s*([\s\S]*?)\s*EndOfFile/)) {
 
     const disciplineExamples = (pasted.match(/Disciplines:\s*([\s\S]*?)\s*EndOfFile/)[1]).split(",");
     for (let s of disciplineExamples) {
-        if (DEBUG_LEVEL > 0) console.log({ discipline: s });
+        if (CONFIG.debug_level > 0) console.log({ discipline: s });
         s = collapseWhitespace(s);
         const discipline = s.split(" ");
 
         let name = discipline[0].toLocaleLowerCase();
-        if (DEBUG_LEVEL > 0) console.log({ discipline: s, name: name });
+        if (CONFIG.debug_level > 0) console.log({ discipline: s, name: name });
         if (name === 'blood') {
             name = 'sorcery';
         }
