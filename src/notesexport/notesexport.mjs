@@ -1,7 +1,8 @@
 const CONFIG = {
     db_path: './db',
     version: '0.0.0.1',
-    debug_level: 0
+    debug_level: 0,
+    config_path: './src/notesexport/local_config.json'
 };
 
 import { Level } from 'level';
@@ -58,3 +59,27 @@ for (const a of process.argv) {
     }
 }
 
+CONFIG.local = JSON.parse(await fs.readFile(CONFIG.config_path, 'utf-8'));
+if (CONFIG.debug_level > 0) console.log({ 'CONFIG.local': CONFIG.local });
+
+const db = new Level(CONFIG.local.life_data_world_path + '/journal', { valueEncoding: 'json' });
+try {
+    await db.open();
+    if (CONFIG.debug_level > 0) {
+        console.log(`database ${CONFIG.local.life_data_world_path} opened successfully.`);
+        console.log(db);
+    }
+
+    let numberOfEntries = 0;
+    for await (const key of db.keys()) {
+        console.log({ key: key, value: await db.get(key) });
+        numberOfEntries++;
+    }
+    console.log({ numberOfEntries: numberOfEntries });
+
+} catch (err) {
+    console.error('database error:', err);
+} finally {
+    // Always close the database when finished to release the lock
+    await db.close();
+}
