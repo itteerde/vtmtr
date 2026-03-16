@@ -2,3 +2,4 @@
 **/test/
 src/spcimporter/import.json
 src/spcimporter/system.json
+src/notesexport/local_config.json
