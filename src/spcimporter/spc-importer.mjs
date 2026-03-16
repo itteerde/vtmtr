@@ -6,7 +6,8 @@ const CURRENT_DATE = new Date('2026-01-01'); // the date in world, used to calcu
 const CONFIG = {
     version: '5.3.14.1',
     debug_level: 0,
-    force_download: false
+    force_download: false,
+    ignore_versions: false
 };
 
 /**
@@ -174,11 +175,12 @@ for (const a of process.argv) {
         console.log();
         console.log(color(consoleColors.gray, `${HELP_INDENT}https://github.com/itteerde/vtmtr/tree/main/src/spcimporter`));
         console.log();
-        console.log(`${HELP_INDENT}Before importing new Actors, export a fresh template from FVTT for version compatibility.`)
-        console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update CONFIG.version).`)
+        console.log(`${HELP_INDENT}Before importing new Actors, export a fresh template from FVTT for version compatibility.`);
+        console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update CONFIG.version).`);
         console.log();
-        console.log(`${HELP_INDENT}--debug run with debugging output.`)
-        console.log(`${HELP_INDENT}--forceDownload forces downloading the manifest.`)
+        console.log(`${HELP_INDENT}--debug run with debugging output.`);
+        console.log(`${HELP_INDENT}--forceDownload forces downloading the manifest.`);
+        console.log(`${HELP_INDENT}--ignoreVersions ignores versions, allowing to use while in conflict.`);
         console.log();
 
         process.exit();
@@ -191,6 +193,10 @@ for (const a of process.argv) {
     if (a.toLocaleLowerCase().startsWith("--forcedownload") || a.toLocaleLowerCase().startsWith("-forcedownload")) {
         CONFIG.force_download = true;
     }
+
+    if (a.toLocaleLowerCase().startsWith("--ignoreversions") || a.toLocaleLowerCase().startsWith("-ignoreversions")) {
+        CONFIG.ignore_versions = true;
+    }
 }
 
 const data = await fs.readFile('./src/spcimporter/v-template.json', 'utf-8');
@@ -199,7 +205,7 @@ const pasted = await fs.readFile('./src/spcimporter/pasted.txt', 'utf-8');
 
 console.log(color(consoleColors.green, `SPC-Importer v${CONFIG.version}`));
 
-if (!CONFIG.version.startsWith(character._stats.systemVersion)) {
+if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(character._stats.systemVersion)) {
     console.log(color(consoleColors.red, `Incompatible versions, need to update importer (template: ${character._stats.systemVersion}, importer: ${CONFIG.version}).`));
     process.exit();
 }
@@ -225,7 +231,7 @@ if (CONFIG.force_download || new Date() - dateManifest > (24 * 3600000)) {
 }
 if (CONFIG.debug_level > 0) console.log(manifest);
 
-if (!CONFIG.version.startsWith(manifest.version)) {
+if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(manifest.version)) {
     console.log(color(consoleColors.red, `Incompatible versions, need to update importer (system manifest: ${manifest.version}, importer: ${CONFIG.version}).`));
     console.log(color(consoleColors.gray, `see ${MANIFEST_URL}`));
     process.exit();
