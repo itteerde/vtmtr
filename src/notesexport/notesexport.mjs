@@ -1,10 +1,12 @@
 const CONFIG = {
-    db_path: '',
-    version: '',
+    db_path: './db',
+    version: '0.0.0.1',
     debug_level: 0
 };
 
 import { Level } from 'level';
+import fs from 'node:fs/promises';
+import { color, consoleColors } from '../lib/colorize.mjs';
 
 /**
  * Returns an array of all keys in a LevelDB database.
@@ -30,3 +32,29 @@ export async function getAllKeys(dbPath) {
 
     return keys;
 }
+
+/**
+ * Process command line arguments.
+ */
+for (const a of process.argv) {
+
+    /**
+     * Display help, for both Unix and Windows conventions (not old windows/DOS though).
+     */
+    if (a.toLocaleLowerCase().startsWith("--help") || a.toLocaleLowerCase().startsWith("-help")) {
+
+        const HELP_INDENT = '  ';
+
+        console.log(color(consoleColors.green, `Notes-Export v${CONFIG.version}`));
+        console.log();
+        console.log(`${HELP_INDENT}--debug run with debugging output.`);
+        console.log();
+
+        process.exit();
+    }
+
+    if (a.toLocaleLowerCase().startsWith("--debug") || a.toLocaleLowerCase().startsWith("-debug")) {
+        CONFIG.debug_level = 3;
+    }
+}
+
