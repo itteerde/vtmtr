@@ -1,23 +1,22 @@
-Sire: Tamoszius “Nero”
-Embraced: 1971 (Born 1953)
-Ambition: Discern the truth behind the concept of
-Golconda
-Convictions: Bring peace to those who are troubled;
-Always move toward enlightenment
-Touchstones: Sravya — Unknowing niece; Gagandeep
-— Distant twin brother
-Humanity: 8
-Generation: 10th
-Blood Potency: 2
-Attributes: Strength 2, Dexterity 5, Stamina 4;
-Charisma 2, Manipulation 3, Composure 3; Intelligence
-3, Wits 3, Resolve 4
-Secondary Attributes: Health 7, Willpower 7
-Skills: Brawl 3, Craft (Repair, Sound Mixing) 3,
-Drive 2, Melee 4; Insight (Emotions) 3, Persuasion
-2, Performance (Guitar, Improvisational Riffs,
-Dance) 5; Academics (Music History, Philosophy)
-3, Medicine 1, Occult 1, Science 1, Technology 2
-Disciplines: Auspex 2, Celerity 3, Presence 3,
-Blood Sorcery 1
+Sire: Roz Kaufmann
+Embraced: 2015 (Born 1992)
+Ambition: Break the nose of the next man who tells
+you what to do
+Convictions: True love never dies; Women need to
+learn to defend themselves against men
+Touchstones: Catrinel Serban — girlfriend for
+whom she’d do anything; Brad Hollins — sensei and
+confidante
+Humanity: 7
+Generation: 13th
+Blood Potency: 1
+Attributes: Strength 4, Dexterity 4, Stamina 3; Charisma
+2, Manipulation 2, Composure 1; Intelligence
+2, Wits 3, Resolve 2
+Secondary Attributes: Health 6, Willpower 3
+Skills: Athletics 3, Brawl (Kickboxing) 4, Larceny
+2, Melee 2, Stealth 2; Etiquette (Dojo) 2, Insight 1,
+Intimidation 3, Performance 3 (Stage Fights), Streetwise
+3, Subterfuge 2; Awareness 4
+Disciplines: Celerity 3, Potence 2
 EndOfFile
