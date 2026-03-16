@@ -72,7 +72,7 @@ try {
 
     let numberOfEntries = 0;
     for await (const key of db.keys()) {
-        console.log({ key: key, value: await db.get(key) });
+        console.log({ key: key, 'value.name': (await db.get(key)).name });
         numberOfEntries++;
     }
     console.log({ numberOfEntries: numberOfEntries });
