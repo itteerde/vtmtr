@@ -1,13 +1,21 @@
 const uuid = 'JournalEntry.CZdNjdUM8GScvoGW'
 
 async function sortJournal(uuid) {
-    let journalEntry = await fromUuid(uuid)
+    const journalEntry = await fromUuid(uuid)
+
     function compareJournalEntryPages(a, b) {
-        return a.name.localeCompare(b.name);
-        map((journalEntry, index) => )
+        return a.name.localeCompare(b.name)
     }
-    //journalEntry.pages.contents.toSorted(compareJournalEntryPages)
-    console.log(journalEntry.pages.contents.toSorted(compareJournalEntryPages))
+
+    const sortedPages = journalEntry.pages.contents
+        .toSorted(compareJournalEntryPages)
+        .map((page, index) => ({
+            _id: page.id,
+            sort: 100000 * (index + 1) // Foundry uses 'sort' integers to determine order
+        }));
+
+    await journalEntry.updateEmbeddedDocuments("JournalEntryPage", sortedPages);
+    ui.notifications.info(`Sorted ${sortedPages.length} pages in "${journal.name}".`);
 }
 
 sortJournal(uuid)
