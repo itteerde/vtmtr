@@ -1,13 +1,19 @@
 const uuid = 'JournalEntry.CZdNjdUM8GScvoGW'
 
 async function sortJournal(uuid) {
-    let JournalEntry = await fromUuid(uuid)
+    let journalEntry = await fromUuid(uuid)
     function compareJournalEntryPages(a, b) {
-        return a.name - b.name;
+        return a.name.localeCompare(b.name);
+        map((journalEntry, index) => )
     }
-    journalEntry.pages.contents.sort(compareJournalEntryPages)
+    //journalEntry.pages.contents.toSorted(compareJournalEntryPages)
+    console.log(journalEntry.pages.contents.toSorted(compareJournalEntryPages))
 }
+
+sortJournal(uuid)
 
 //journalEntry.pages.contents.name
 
-//JournalEntryPage 
+//JournalEntryPage.sort
+
+//map(callbackFn, thisArg)
