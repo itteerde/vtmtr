@@ -15,7 +15,7 @@ async function sortJournal(uuid) {
         }));
 
     await journalEntry.updateEmbeddedDocuments("JournalEntryPage", sortedPages);
-    ui.notifications.info(`Sorted ${sortedPages.length} pages in "${journal.name}".`);
+    ui.notifications.info(`Sorted ${sortedPages.length} pages in "${journalEntry.name}".`);
 }
 
 sortJournal(uuid)
