@@ -1,5 +1,3 @@
-const uuid = 'JournalEntry.CZdNjdUM8GScvoGW'
-
 async function sortJournal(uuid) {
     const journalEntry = await fromUuid(uuid)
 
@@ -18,7 +16,28 @@ async function sortJournal(uuid) {
     ui.notifications.info(`Sorted ${sortedPages.length} pages in "${journalEntry.name}".`);
 }
 
-sortJournal(uuid)
+// prepare HTML for the dialog
+let dialogContent = `<label for="uuid">Paste a UUID:</label>
+
+<input
+type="text"
+id="uuid"
+name="uuid"
+/>`
+
+const response = await foundry.applications.api.DialogV2.wait({
+    window: { title: "Sort Journal Entry" },
+    content: dialogContent,
+    buttons: [{
+        action: "sort",
+        label: "Sort Journal Entry",
+        default: true,
+        callback: (event, button, dialog) => new foundry.applications.ux.FormDataExtended(button.form).object // makes available the named (name) html elements
+    }]
+});
+console.log({ response: response });
+
+sortJournal(response.uuid)
 
 //journalEntry.pages.contents.name
 
