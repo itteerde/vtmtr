@@ -21,7 +21,7 @@ const buttons = {
                     ${message}
                 </di>
                 `,
-                sound: "modules/Tablerules/sounds/turn.ogg",
+                sound: "modules/vtmtr/assets/sounds/turn.ogg",
                 whisper: ChatMessage.getWhisperRecipients('GM')
             });
         }
@@ -29,4 +29,3 @@ const buttons = {
 }
 
 new Dialog({ title: "Timeout", content, buttons, default: "message" }).render(true);
-
