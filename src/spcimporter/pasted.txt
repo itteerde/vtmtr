@@ -16,7 +16,7 @@ Attributes: Strength 4, Dexterity 4, Stamina 3; Charisma
 Secondary Attributes: Health 6, Willpower 3
 Skills: Athletics 3, Brawl (Kickboxing) 4, Larceny
 2, Melee 2, Stealth 2; Etiquette (Dojo) 2, Insight 1,
-Intimidation 3, Performance 3 (Stage Fights), Streetwise
+Intimidation 3, Performance (Stage Fights) 3, Streetwise
 3, Subterfuge 2; Awareness 4
 Disciplines: Celerity 3, Potence 2
 EndOfFile
