@@ -49,3 +49,5 @@ input.addEventListener("drop", async (ev) => {
 
 // 'dragover' must be prevented for the drop event to fire
 input.addEventListener("dragover", (ev) => ev.preventDefault());
+
+// this could be added to Timeout, but would only work for Merits, not Disciplines/Powers, as the latter don't implement drag, therefore implementing drop support to ours isn't getting us far.
