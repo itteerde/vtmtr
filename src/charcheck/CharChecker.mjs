@@ -119,27 +119,27 @@ console.log(character);
 
 function checkAttributes() {
 
-    let attributes = Object.values(character.system.attributes).map(attribute => attribute.value);
-
     let fours = 0
     let threes = 0
     let twos = 0
     let ones = 0
 
-    attributes.forEach((currentElement) => {
-        if (currentElement === 4) {
-            fours++;
-        }
-        if (currentElement === 3) {
-            threes++;
-        }
-        if (currentElement === 2) {
-            twos++;
-        }
-        if (currentElement === 1) {
-            ones++;
-        }
-    });
+    Object.values(character.system.attributes)
+        .map(attribute => attribute.value)
+        .forEach((currentElement) => {
+            if (currentElement === 4) {
+                fours++;
+            }
+            if (currentElement === 3) {
+                threes++;
+            }
+            if (currentElement === 2) {
+                twos++;
+            }
+            if (currentElement === 1) {
+                ones++;
+            }
+        });
 
     if (fours !== 1) {
         throw new Error(`Must have only one attribute withe the value of four; there was ${fours}.`);
