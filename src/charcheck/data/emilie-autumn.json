@@ -1,0 +1,1500 @@
+{
+  "name": "Emilie Autumn",
+  "type": "vampire",
+  "img": "assets/characters/Emelie%20Autumn/amelieautumn.jpg",
+  "system": {
+    "locked": true,
+    "hasSkillAttributeData": true,
+    "group": "CR1clqOlgZMWYfLU",
+    "biography": "",
+    "appearance": "",
+    "equipment": "",
+    "notes": "",
+    "privatenotes": "",
+    "bio": {
+      "age": {
+        "trueage": "249",
+        "apparent": "29"
+      },
+      "dateof": {
+        "birth": "1776-09-22",
+        "death": "1805-09-22"
+      },
+      "history": ""
+    },
+    "headers": {
+      "concept": "",
+      "chronicle": "",
+      "ambition": "I wish to create a complete and authentic Book of Nod",
+      "desire": "To create a safe environment for my coterie",
+      "touchstones": "<p>\"None may control me\" — patient at a psychiatric ward where Emilie volunteers.</p><p>\"Uphold the norms of decent society\" — a nun working at a local monastery in Chicago.</p><p>\"The guilty must be punished\" — sexual offender in a local prison, currently incarcerated; a pen pal. </p>",
+      "tenets": "",
+      "sire": "Johann Christian Reil",
+      "generation": "12th Generation",
+      "domitor": "",
+      "creedfields": "",
+      "cellname": ""
+    },
+    "exp": {
+      "value": 0,
+      "max": 0
+    },
+    "derivedXP": {
+      "totalXP": 0,
+      "remainingXP": 0
+    },
+    "humanity": {
+      "value": 7,
+      "stains": 0
+    },
+    "despair": {
+      "value": 0
+    },
+    "desperation": {
+      "value": 0
+    },
+    "danger": {
+      "value": 0,
+      "max": 5
+    },
+    "health": {
+      "aggravated": 0,
+      "superficial": 0,
+      "max": 5,
+      "value": 5
+    },
+    "willpower": {
+      "aggravated": 0,
+      "superficial": 0,
+      "max": 7,
+      "value": 5
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "active": false
+      },
+      "charisma": {
+        "value": 2,
+        "active": false
+      },
+      "intelligence": {
+        "value": 3,
+        "active": false
+      },
+      "dexterity": {
+        "value": 3,
+        "active": false
+      },
+      "manipulation": {
+        "value": 2,
+        "active": false
+      },
+      "wits": {
+        "value": 2,
+        "active": false
+      },
+      "stamina": {
+        "value": 2,
+        "active": false
+      },
+      "composure": {
+        "value": 3,
+        "active": false
+      },
+      "resolve": {
+        "value": 4,
+        "active": false
+      }
+    },
+    "skills": {
+      "athletics": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "animalken": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "academics": {
+        "value": 3,
+        "bonuses": [
+          {
+            "source": "History (Ancient history)",
+            "value": 1,
+            "paths": [
+              "skills.academics"
+            ],
+            "displayWhenInactive": true
+          }
+        ],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "brawl": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "etiquette": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "awareness": {
+        "value": 2,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "craft": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "insight": {
+        "value": 2,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "finance": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "drive": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "intimidation": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "investigation": {
+        "value": 1,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "firearms": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "leadership": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "medicine": {
+        "value": 1,
+        "bonuses": [
+          {
+            "source": "Anesthetics",
+            "value": 1,
+            "paths": [
+              "skills.medicine"
+            ],
+            "displayWhenInactive": true
+          }
+        ],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "larceny": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "performance": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "occult": {
+        "value": 4,
+        "bonuses": [
+          {
+            "source": "Vampires",
+            "value": 1,
+            "paths": [
+              "skills.occult"
+            ],
+            "displayWhenInactive": true
+          }
+        ],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "melee": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "persuasion": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "politics": {
+        "value": 2,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "stealth": {
+        "value": 3,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "streetwise": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "science": {
+        "value": 3,
+        "bonuses": [
+          {
+            "source": "Genetics",
+            "value": 1,
+            "paths": [
+              "skills.science"
+            ],
+            "displayWhenInactive": true
+          }
+        ],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "survival": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "subterfuge": {
+        "value": 0,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      },
+      "technology": {
+        "value": 1,
+        "bonuses": [],
+        "active": false,
+        "description": "",
+        "macroid": ""
+      }
+    },
+    "blood": {
+      "potency": 1,
+      "generation": ""
+    },
+    "hunger": {
+      "value": 1,
+      "max": 5
+    },
+    "disciplines": {
+      "animalism": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "auspex": {
+        "description": "",
+        "value": 3,
+        "powers": [],
+        "visible": false,
+        "selected": true
+      },
+      "celerity": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "dominate": {
+        "description": "",
+        "value": 1,
+        "powers": [],
+        "visible": false,
+        "selected": false
+      },
+      "fortitude": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "obfuscate": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "potence": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "presence": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "protean": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "sorcery": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "oblivion": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "alchemy": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "rituals": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      },
+      "ceremonies": {
+        "description": "",
+        "value": 0,
+        "powers": [],
+        "visible": false
+      }
+    },
+    "balance": {
+      "hauglosk": {
+        "value": 0
+      },
+      "harano": {
+        "value": 0
+      }
+    },
+    "talismans": [],
+    "rage": {
+      "value": 1,
+      "max": 5
+    },
+    "frenzyActive": false,
+    "crinosHealth": {
+      "aggravated": 0,
+      "superficial": 0,
+      "max": 4,
+      "value": 4
+    },
+    "lostTheWolf": false,
+    "renown": {
+      "glory": {
+        "value": 0
+      },
+      "honor": {
+        "value": 0
+      },
+      "wisdom": {
+        "value": 0
+      }
+    },
+    "activeForm": "homid",
+    "forms": {
+      "homid": {
+        "description": "",
+        "token": {
+          "img": ""
+        }
+      },
+      "glabro": {
+        "description": "",
+        "token": {
+          "img": ""
+        }
+      },
+      "crinos": {
+        "description": "",
+        "token": {
+          "img": ""
+        }
+      },
+      "hispo": {
+        "description": "",
+        "token": {
+          "img": ""
+        }
+      },
+      "lupus": {
+        "description": "",
+        "token": {
+          "img": ""
+        }
+      }
+    },
+    "gifts": {
+      "native": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "ragabash": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "theurge": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "philodox": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "galliard": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "ahroun": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "blackfury": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "bonegnawer": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "childrenofgaia": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "galestalker": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "ghostcouncil": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "glasswalker": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "hartwarden": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "redtalon": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "shadowlord": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "silentstrider": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "silverfang": {
+        "description": "",
+        "value": 0,
+        "powers": []
+      },
+      "rites": {
+        "description": "",
+        "powers": []
+      }
+    },
+    "edges": {
+      "arsenal": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "fleet": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "ordnance": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "library": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "improvisedgear": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "globalaccess": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "dronejockey": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "beastwhisperer": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "sensetheunnatural": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "repeltheunnatural": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "thwarttheunnatural": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      },
+      "artifact": {
+        "description": "",
+        "value": 0,
+        "perks": [],
+        "pools": [],
+        "visible": false
+      }
+    },
+    "settings": {
+      "headerbg": "",
+      "background": "",
+      "limited": {
+        "biography": true,
+        "appearance": true,
+        "touchstones": false,
+        "tenets": false
+      },
+      "skillAttributeInputs": false,
+      "enableGifts": false,
+      "enableDisciplines": false,
+      "enableEdges": false,
+      "generalDifficultyEnabled": true
+    },
+    "experiences": [
+      {
+        "id": "daMsBzcp",
+        "name": "Character Creation Neo.",
+        "value": 15,
+        "timestamp": 1762328122858
+      },
+      {
+        "id": "tDdwaAEC",
+        "name": "Malkav's Will",
+        "value": -15,
+        "timestamp": 1762328137654
+      }
+    ],
+    "selectedDiscipline": "auspex",
+    "selectedDisciplinePower": "WJwk5WU6L0sPmYja",
+    "description": "",
+    "bonuses": {},
+    "selectedGift": "",
+    "selectedGiftPower": "",
+    "selectedEdge": "",
+    "selectedEdgePerk": ""
+  },
+  "prototypeToken": {
+    "name": "Emilie Autumn",
+    "displayName": 0,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "assets/characters/Emelie Autumn/Token/*",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "willpower"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": true,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "items": [
+    {
+      "name": "Malkavian",
+      "type": "clan",
+      "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/SymbolClanMalkavianV5.webp",
+      "system": {
+        "description": "<h5>Disciplines: Auspex, Dominate, Objuscate</h5><h5>It has long been the misconception that few Kindred families are as disparate as the Clan of the Moon. Other clans see them and reason, “they are each mad, so why should their respective origins matter?” To the Malkavians, origins matter a great deal. Though sires may pick childer from all walks of life, age groups, ethnicities, and genders, every mortal selected for the Embrace possesses something only visible to a Malkavian. One of the gifts the Malkavians look for in a mortal is what they call “second sight.” If a person interprets dreams, can perceive spirits, or unerringly predicts future events, the Malkavians take notice. Such a person acts as a beacon, calling out to every member of the clan that sees them. Another gift revered by the Malkavians, is that of “insight.” A high level of empathy, finely-tuned knowledge of complex subject matter, or just an obsessive drive to pursue the answers to philosophical questions each appeal to the clan. As insight is often tied to profession, the clan benefits from a range of academics and doctors – especially therapists and psychologists. Finally, the Clan of the Moon are fascinated by the “broken” – indi viduals who have been changed by traumatic experiences or who were simply born slightly detached from themselves and the rest of society. To the Malkavians, they are but one gentle push away from having access to an altogether different plane of reality. Rather than treating them as burdens, the clan sees them as having great potential. All Malkavians suffer mental illness following the Embrace - sometimes accentuating an existing condition, other times adding a new dimension to their instability. As if their thoughts and actions were based on otherworldly logic, there seems to be no knowing when their condition will manifest destructively or when it will offer important per spectives where such were previously lacking. As a rule, no other Kindred feels completely comfortable around a known Malkavian, often viewing them as unpredictable maniacs whose flashes of insight are rarely worth the fits of insanity. Some Malkavians claim there is a common factor to their madness; that they are all psychically linked through a communal wavelength, a shared consciousness of sorts. Those who are aware of its existence refer to it as the cobweb or, more recently, the madness network.</h5>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "bane": "<p>Even the most mundane-seeming Oracle raises the hackles of those around them when they tap into the powers of their eerie Blood. Although they rarely recognize the source of these sensations, mortals respond with notable unease when a Malkavian uses their powers, and other vampires can readily recognize the presence of a fellow undead. Whenever a Malkavian uses a Discipline power, mortals in close proximity (roughly in the same room or equivalent) are spooked and any social interaction with them apart from intimidation suffers a dice penalty equal to the Malkavian’s Bane Severity. This sensation isn’t Masquerade-breaking, but the mortal is struck by a sudden fear or dislike of the vampire, lasting one scene. Other vampires experience a similar sensation, instantly recognizing the Malkavian as a vampire, though no penalties apply to interactions with them.</p>",
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.clans.Item.HhEPHpYzkx4DXmAf",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762317016188,
+        "modifiedTime": 1763043171589,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "_id": "0t4rwy9jrHk8Uwms",
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "dY39IRZ2aDPafQcZ",
+      "name": "Sense The Unseen",
+      "type": "power",
+      "_id": "lIGEx1E1linMZzcP",
+      "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+      "system": {
+        "description": "<p>The senses of the vampire become attuned to dimensions beyond the mundane, allowing them to sense presences otherwise hidden from the naked eye. This can be any thing from another vampire using Obfuscate to someone using Auspex to spy upon the character to a ghost in the middle of the room. Dormant Blood Sorcery spells and rituals might also be found with this power, at the Storyteller’s discretion. </p><p>■ Cost: Free </p><p>■ Dice Pools: Wits + Auspex or Resolve + Auspex </p><p>■ System: Whenever there’s something supernatural hiding in plain sight, the Storyteller makes a hidden roll of Wits + Auspex against a Difficulty they choose. Against an entity actively trying to stay hidden, the Storyteller can call for a blind roll (“Lisa, roll seven dice for me”) as a contest against the target’s relevant pool. (For example, detecting a vampire using Obfuscate would be a roll of Wits + Auspex vs Wits + Obfuscate) If the vampire actively searches for a hidden supernatural entity, they roll Resolve + Auspex similarly. </p><p>■ Duration: Passive</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "discipline": "auspex",
+        "level": 1,
+        "dicepool": {
+          "l93S6IIw": {
+            "path": "attributes.wits"
+          },
+          "IlRiXrYI": {
+            "path": "disciplines.auspex"
+          }
+        },
+        "cost": null,
+        "macroid": "",
+        "selected": false,
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.5gUFnvi0GFfyIEl2",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762320681228,
+        "modifiedTime": 1762718770462,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "ktI6ZDtzasFQxSeA",
+      "name": "Premonition",
+      "type": "power",
+      "_id": "WJwk5WU6L0sPmYja",
+      "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+      "system": {
+        "description": "<p>The vampire experiences flashes of insight. These may take the form of raised hackles, sudden inspiration or even vivid visions. While never too precise, these visions can nudge the vampire out of harm’s way or reveal a truth previously overlooked. </p><p>■ Cost: Free or one Rouse Check </p><p>■ Dice Pools: Resolve + Auspex </p><p>■ System: Whenever the Storyteller deems it appropriate, this power gives the character a sudden hint that aids them in some way: letting them find a clue they’ve missed or saving them from danger. Whether it gives the character a sudden vision of themselves walking into a trap, an inviting red glow over the second right turn during a chase, or the brief flash of a skeleton beneath the floor boards in the Prince’s office, this power always gives the Storyteller license to subtly speed up play or move the story onto a desired track. The suggested limit is one premonition per scene, even if more than one character has Premonition. </p><p>■ The user can also actively provoke a premonition by focusing on a subject, making a Rouse Check and rolling Resolve + Auspex. The number of success es rolled determines the level of insight on the subject, if any. </p><p>■ Duration: Passive</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "discipline": "auspex",
+        "level": 2,
+        "dicepool": {
+          "KGBxuUVk": {
+            "path": "attributes.resolve"
+          },
+          "l4pZnl11": {
+            "path": "disciplines.auspex"
+          }
+        },
+        "cost": 1,
+        "macroid": "",
+        "selected": true,
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.W6UmkY8jGLF6nA5G",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762320707370,
+        "modifiedTime": 1762718785209,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "zQVeuZtYSmq00SJJ",
+      "name": "Cloud Memory",
+      "type": "power",
+      "_id": "3KQcdQxQpzVRVCip",
+      "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Dominate_symbol.png",
+      "system": {
+        "description": "<p>By uttering the phrase “Forget!” the user can make the Dominated victim forget the current moment as well as the last few minutes, enough to mask a superficial feeding or a chance meeting. No new memories are formed and if pressed the victim realizes they have a few minutes missing.</p><p>■ Cost: Free</p><p>■ Dice Pools: Charisma + Dominate vs Wits + Resolve</p><p>■ System: No roll is required against an unprepared mortal victim. Clouding the memory of a resisting victim or another vampire requires a Charisma + Dominate vs Wits + Resolve roll.</p><p>■ Duration: Indefinitely</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "discipline": "dominate",
+        "level": 1,
+        "dicepool": {
+          "qbwsrSKy": {
+            "path": "attributes.charisma"
+          },
+          "wANPh1su": {
+            "path": "disciplines.dominate"
+          }
+        },
+        "cost": null,
+        "macroid": "",
+        "selected": false,
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.xCCtEroRVLAw314V",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762320725655,
+        "modifiedTime": 1762718785218,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "GzJx6XVkFDl7TzF9",
+      "name": "Share The Senses",
+      "type": "power",
+      "_id": "HsariJyOc9XC4qbe",
+      "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+      "system": {
+        "description": "<p>By reaching out with their mind, the vampire can tap into the senses of another mortal or vampire, seeing, hearing, and feeling what they do. The user still retains their own perceptions and is still aware of their own surroundings, though the effect requires some getting used to. The user decides whether to tap into only one, some, or all of the target’s senses. When used on a stranger this power requires line of sight to initiate. However, it can be used over longer distances on someone who still has some of the user’s Blood in their body. </p><p>■ Cost: One Rouse Check </p><p>■ Dice Pools: Resolve + Auspex </p><p>■ System: Roll Resolve + Auspex at Difficulty 3. This Difficulty can go up depend ing on distraction, distance, and other factors, such as the amount of the user’s Blood that remains in the target. The target usually remains unaware of the intrusion, but Sense the Unseen can allow the passenger to be noticed. To get rid of an unwanted rider, the victim must beat the intruder at a Wits + Re solve vs Wits + Resolve roll. An Auspex user thrown out this way cannot make another Sharing attempt until the next night. </p><p>■ Duration: One scene</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "discipline": "auspex",
+        "level": 3,
+        "dicepool": {
+          "y1Is865v": {
+            "path": "attributes.resolve"
+          },
+          "Dyp9gCDn": {
+            "path": "disciplines.auspex"
+          }
+        },
+        "cost": 1,
+        "macroid": "",
+        "selected": false,
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.iW0Age4PHhRqVOKi",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762322411302,
+        "modifiedTime": 1762718776878,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "r1wjwrIVzALpkFpo",
+      "name": "Sandman",
+      "type": "predatorType",
+      "_id": "PkjqS3fhB78aRcn7",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>You rely on your stealth or Disciplines to feed from sleeping victims. If they never wake during the feeding, they won’t know you exist. Perhaps you were very anti-social in life; you don’t feel cut out for the intense interpersonal nightlife or physical violence of more extroverted hunters.</p><p>■ Add a specialty: Medicine (Anesthetics) or Stealth (Break-in)</p><p>■ Gain one dot of Auspex or Obfuscate</p><p>■ Gain one dot of Resources</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "macroid": "",
+        "dataItemId": "",
+        "dicepool": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.blood-potency-predator-type.Item.Kihkcn3qaxJlE3tT",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762324377940,
+        "modifiedTime": 1767040553545,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "wlgKLLJRhcGtb1ql",
+      "name": "Flaw: (•) Living in the Past",
+      "type": "feature",
+      "_id": "abX5HWjWRbAwQw8r",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>Only ancillae or older vampires may take either of these Flaws.</p><p></p><p>You haven’t grasped the modern mindset, or you just don’t want to. You have one or more seriously outdated Convictions, e.g. “The Pope’s word is law,” “Women are delicate flowers,” “Lower classes exist only to serve,” or “Burn your enemies’ baggage.” These archaic moralities maintain your Humanity but are odious to many; you lose one die from Social test dice pools involving such archaic beliefs except with vampires your age and older, who may admire your steadfast virtue.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "flaw",
+        "points": 1,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.advantages-flaws.Item.67xHoNo3IT95jWrt",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762324740692,
+        "modifiedTime": 1767040553545,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "eLvkdKDZQoLeUKTM",
+      "name": "Flaw: (•) Stigmata",
+      "type": "feature",
+      "_id": "m1kmTkjKHoMn2vqO",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>You begin to bleed from open wounds on your hands, feet, and forehead when you reach Hunger 4. This attracts attention, leaves traces, and may penalize some dice pools at the Storyteller’s discretion.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "flaw",
+        "points": 1,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.advantages-flaws.Item.Td5uL5sxQKtCS1wK",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762324746246,
+        "modifiedTime": 1767040553545,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "wr5SIxwezXzT8NGk",
+      "name": "Blood Potency 1",
+      "type": "resonance",
+      "_id": "TBUrpskT75sZs9XN",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>You are a true vampire, though only barely so according to some elders. Still, your vampiric Blood can accomplish some spectacular things when roused.</p><p>■ Add one Attribute die to your dice pool when performing a Blood Surge (p. 218).</p><p>■ When Mending Damage, you can remove 1 point of Superficial damage per Rouse Check.</p><p>■ Roll two dice and pick the highest when rolling a Rouse Check for level 1 discipline powers. (Or re-roll the Rouse Check)</p><p>■ You have a Bane Severity of 1.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.blood-potency-predator-type.Item.7XWp1JxbGtnuyiHP",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762327766645,
+        "modifiedTime": 1767040553545,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "ojclQS3HVZYfeppj",
+      "name": "• A Break in the Static",
+      "type": "feature",
+      "_id": "FTo3SoQ34zsFrzR6",
+      "img": "modules/vtmtr/assets/icons/malkavian.svg",
+      "system": {
+        "description": "<p>The Cobweb is just barely perceptible to you. You catch sporadic snatches of conversation, often just a few distinct words or images. It’s enough to piece together an order or a call for aid, though you’re unable to respond.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "merit",
+        "points": 1,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.ovPq4GyzoIOWyXVk",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762450153280,
+        "modifiedTime": 1762450153280,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "ojclQS3HVZYfeppj",
+      "name": "•• Shared Condition",
+      "type": "feature",
+      "_id": "3QlF6tzK1fUBcOVj",
+      "img": "modules/vtmtr/assets/icons/malkavian.svg",
+      "system": {
+        "description": "<p>You recognize your own. As soon as an individual is introduced to you as a vampire, you can tell whether they’re of Clan Malkavian.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "merit",
+        "points": 2,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.0gYemzktXbrqVayg",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762450236760,
+        "modifiedTime": 1762450236760,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "ssc0xboCLq8X00rA",
+      "name": "Mask",
+      "type": "feature",
+      "_id": "IhDEiW4Ekbou2rNV",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>• You have a good fake identity, including a credit card, bank account, credit history, birth certificate, etc., all in your Mask’s name. You can pass a state or provincial-level background check.</p><p>•• Your Mask can pass a background check with the national police: FBI, Scotland Yard, or the equivalent. If you have a military or intelligence record, it has been classified.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "background",
+        "points": 1,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.advantages-flaws.Item.Zg8x0Snq7bU4gZzi",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762450337463,
+        "modifiedTime": 1767040553545,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "••• Across the Web",
+      "type": "feature",
+      "_id": "Iph3ZCsiF0Z2GbDB",
+      "img": "modules/vtmtr/assets/icons/malkavian.svg",
+      "system": {
+        "description": "<p>Your voice is one of the strongest on the Cobweb. You can hold more involved conversations with Malkavians in your city. Once per story you may initiate the Call, sending impressions of the time and gathering place to all who can hear. This does not guarantee obedience —herding cats is child’s play compared to organizing the children of Malkav.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "merit",
+        "points": 3,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "folder": "ojclQS3HVZYfeppj",
+      "sort": 100000,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.8ZliiHWRJIvKO0cM",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762456810429,
+        "modifiedTime": 1762456817254,
+        "lastModifiedBy": "eSzVRD7CqPVwNKrz"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "••••• Malkav's Will",
+      "type": "feature",
+      "_id": "MsxZMqd7vk5M0Jp7",
+      "img": "modules/vtmtr/assets/icons/malkavian.svg",
+      "system": {
+        "description": "<p>The entity in the Cobweb is awake and aware. They know your name and tell you their secrets. They have a plan and want you to help carry it out. Malkav — or a consciousness pretending to be him — speaks to you directly via the Network. Once per story, you may ask the Storyteller to divulge a secret about another Malkavian or reveal what orders the mind in the Cobweb wants you to follow.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "merit",
+        "points": 5,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "folder": "ojclQS3HVZYfeppj",
+      "sort": 200000,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Item.nqqf3duQ6aJ8RPXG",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.350",
+        "systemId": "vtm5e",
+        "systemVersion": "5.2.2",
+        "createdTime": 1762456813470,
+        "modifiedTime": 1762456813470,
+        "lastModifiedBy": "eSzVRD7CqPVwNKrz"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "gNzlMBQnbSdlEeA8",
+      "name": "•Linguistics",
+      "type": "feature",
+      "_id": "91PgnPAfIko3B08B",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>Every character has fluency in their birth language and (unless the player and Storyteller have a reason to declare otherwise) in the dominant language of the chronicle setting. For example, a Mexican werewolf in a chronicle set in the Utah Badlands can speak and read Spanish and English. Storytellers may opt to allow Garou whose birth tongue matches that of the setting to take a second language anyway.</p><p>Each dot in Linguistics allows the character to fluently speak, write, and read one additional language apart from those two default languages.</p><p>Note that reading certain old documents or chanting in a strange dialect may impose additional Difficulty to Academics or Occult tests.</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "merit",
+        "points": 1,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.advantages-flaws.Item.xn5QGRdnv6www4bO",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
+        "createdTime": 1771377487876,
+        "modifiedTime": 1771377621833,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "name": "XP Bonus",
+      "type": "feature",
+      "system": {
+        "featuretype": "merit",
+        "description": "",
+        "macroid": "",
+        "bonuses": [],
+        "dataItemId": "",
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "current": 0,
+          "max": 0,
+          "enabled": false
+        },
+        "points": 0
+      },
+      "flags": {
+        "wod5e": {
+          "dataItemId": "feature-new-boon"
+        }
+      },
+      "_id": "tTY8nbDZ1EWZope7",
+      "img": "systems/wod5e/assets/icons/items/feature.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "_stats": {
+        "compendiumSource": "Actor.c1WSjz0u4gNYbig3.Item.xTDmqOSFMg3H9goz",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
+        "createdTime": 1771377606848,
+        "modifiedTime": 1771377606848,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "effects": [],
+  "folder": "sossREWiz14r6oFO",
+  "flags": {
+    "vtm5e": {
+      "manualDefaultOwnership": true
+    },
+    "wod5e": {
+      "manualDefaultOwnership": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "vtm5e",
+      "uuid": "Actor.v1fYeJ4jfU9HgfBZ",
+      "coreVersion": "13.351",
+      "systemId": "wod5e",
+      "systemVersion": "5.3.14"
+    },
+    "coreVersion": "13.351",
+    "systemId": "wod5e",
+    "systemVersion": "5.3.14",
+    "createdTime": 1762313212486,
+    "modifiedTime": 1771377629344,
+    "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+  },
+  "ownership": {
+    "default": 1
+  }
+}
