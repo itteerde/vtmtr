@@ -1,4 +1,4 @@
-//check for one Attribute at 4; three Attributes at 3; four Attributes at 2; one Attribute at 1.
+//check for one Attribute at 4; three Attributes at 3; four Attributes at 2; one Attribute at 1. --done
 
 //set Health = Stamina + 3; Willpower = Composure + Resolve.
 
