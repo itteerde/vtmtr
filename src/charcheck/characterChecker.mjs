@@ -14,6 +14,7 @@
 
 //check Alleycat specialty: Intimidation (Stickups) || Brawl (Grappling); + one dot of Celerity || Potence || - 1 dot of Humanit; three dots of criminal Contacts
 //check Bagger specialty: Larceny(Lockpicking) || Streetwise(Black Market); check one dot of Blood Sorcery (Tremere only) || Obfuscate; check Feeding Merit: Iron Gullet(•••); check Enemy Flaw: (••) Either
+//
 
 //check for 7 points on Advantages
 
