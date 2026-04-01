@@ -6,7 +6,8 @@ const CONFIG = {
     version: '5.3.15.1',
     debug_level: 0,
     force_download: false,
-    ignore_versions: false
+    ignore_versions: false,
+    character_path: './src/charcheck/data/emilie-autumn.json'
 };
 
 /**
@@ -39,7 +40,7 @@ for (const a of process.argv) {
     /**
      * Display help, for both Unix and Windows conventions (not old windows/DOS though).
      */
-    if (a.toLocaleLowerCase().startsWith("--help") || a.toLocaleLowerCase().startsWith("-help")) {
+    if (process.argv.length < 3 || a.toLocaleLowerCase().startsWith("--help") || a.toLocaleLowerCase().startsWith("-help")) {
 
         const HELP_INDENT = '  ';
 
@@ -48,6 +49,8 @@ for (const a of process.argv) {
         console.log(color(consoleColors.gray, `${HELP_INDENT}https://github.com/itteerde/vtmtr/tree/main/src/charcheck`));
         console.log();
         console.log(`${HELP_INDENT}If versions don't match anymore, update the importer (check changes, then update CONFIG.version).`);
+        console.log();
+        console.log(`${HELP_INDENT} node .\\src\\charcheck\\CharChecker.mjs .\\src\\charcheck\\data\\emilie-autumn.json`);
         console.log();
         console.log(`${HELP_INDENT}--debug run with debugging output.`);
         console.log(`${HELP_INDENT}--forceDownload forces downloading the manifest.`);
@@ -70,7 +73,12 @@ for (const a of process.argv) {
     }
 }
 
-const data = await fs.readFile('./src/charcheck/data/emilie-autumn.json', 'utf-8');
+
+if (!process.argv[2].startsWith('-')) {
+    CONFIG.character_path = process.argv[2];
+}
+
+const data = await fs.readFile(CONFIG.character_path, 'utf-8');
 const character = JSON.parse(data);
 
 console.log(color(consoleColors.green, `Char Checker v${CONFIG.version}`));
@@ -107,3 +115,4 @@ if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(manifest.version)) {
     process.exit();
 }
 
+console.log(character);
