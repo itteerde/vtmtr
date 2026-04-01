@@ -116,3 +116,64 @@ if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(manifest.version)) {
 }
 
 console.log(character);
+
+function checkAttributes() {
+
+    let attributes = []
+    attributes.push(character.system.attributes.strength.value);
+    attributes.push(character.system.attributes.charisma.value);
+    attributes.push(character.system.attributes.intelligence.value);
+    attributes.push(character.system.attributes.dexterity.value);
+    attributes.push(character.system.attributes.manipulation.value);
+    attributes.push(character.system.attributes.wits.value);
+    attributes.push(character.system.attributes.stamina.value);
+    attributes.push(character.system.attributes.composure.value);
+    attributes.push(character.system.attributes.resolve.value);
+
+    let fours = 0
+    let threes = 0
+    let twos = 0
+    let ones = 0
+
+    attributes.forEach((currentElement) => {
+        if (currentElement === 4) {
+            fours++;
+        }
+        if (currentElement === 3) {
+            threes++;
+        }
+        if (currentElement === 2) {
+            twos++;
+        }
+        if (currentElement === 1) {
+            ones++;
+        }
+    });
+
+    if (fours !== 1) {
+        throw new Error(`Must have only one attribute withe the value of four; there was ${fours}.`);
+
+    }
+
+    if (threes !== 3) {
+        throw new Error(`Must have only three attributes withe the value of three; there was ${threes}.`);
+
+    }
+
+    if (twos !== 4) {
+        throw new Error(`Must have only four attributes withe the value of two; there was ${twos}.`);
+
+    }
+
+    if (ones !== 1) {
+        throw new Error(`Must have only one attribute withe the value of one; there was ${ones}.`);
+
+    }
+    return true
+}
+
+checkAttributes()
+
+console.log(checkAttributes())
+
+//set Health = Stamina + 3; Willpower = Composure + Resolve.
