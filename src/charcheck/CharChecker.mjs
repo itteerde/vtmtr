@@ -119,16 +119,7 @@ console.log(character);
 
 function checkAttributes() {
 
-    let attributes = []
-    attributes.push(character.system.attributes.strength.value);
-    attributes.push(character.system.attributes.charisma.value);
-    attributes.push(character.system.attributes.intelligence.value);
-    attributes.push(character.system.attributes.dexterity.value);
-    attributes.push(character.system.attributes.manipulation.value);
-    attributes.push(character.system.attributes.wits.value);
-    attributes.push(character.system.attributes.stamina.value);
-    attributes.push(character.system.attributes.composure.value);
-    attributes.push(character.system.attributes.resolve.value);
+    let attributes = Object.values(character.system.attributes).map(attribute => attribute.value);
 
     let fours = 0
     let threes = 0
