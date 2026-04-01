@@ -13,8 +13,9 @@
 //check Predator type (p. 175) and match for: + one of the listed specialties + one dot to a listed Discipline + associated Advantages or Flaws.
 
 //check Alleycat specialty: Intimidation (Stickups) || Brawl (Grappling); + one dot of Celerity || Potence || - 1 dot of Humanit; three dots of criminal Contacts
-//check Bagger specialty: Larceny(Lockpicking) || Streetwise(Black Market); check one dot of Blood Sorcery (Tremere only) || Obfuscate; check Feeding Merit: Iron Gullet(•••); check Enemy Flaw: (••) Either
-//
+//check Bagger specialty: Larceny(Lockpicking) || Streetwise(Black Market); check + one dot of Blood Sorcery (Tremere only) || Obfuscate; check Feeding Merit: Iron Gullet(•••); check Enemy Flaw: (••) Either
+//check Blood Leech speciality: Brawl(Kindred) || Stealth(against Kindred); check + one dot of Celerity || Protean; - one dot of Humanity || + Blood Potency by one || Gain the Dark Secret Flaw: (••) Diablerist || the Shunned Flaw: (••); Gain the Feeding Flaw: (••) Prey Exclusion(mortals)
+//check Cleaver specialty: Persuasion (Gaslighting) || Subterfuge (Coverups); check + one dot of Dominate || Animalism; check Gain the Dark Secret Flaw: (•)Cleaver; Gain the Herd Advantage (••)
 
 //check for 7 points on Advantages
 
