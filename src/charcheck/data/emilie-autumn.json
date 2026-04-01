@@ -59,13 +59,13 @@
     },
     "health": {
       "aggravated": 0,
-      "superficial": 0,
+      "superficial": 3,
       "max": 5,
       "value": 5
     },
     "willpower": {
       "aggravated": 0,
-      "superficial": 0,
+      "superficial": 2,
       "max": 7,
       "value": 5
     },
@@ -249,7 +249,7 @@
         "value": 4,
         "bonuses": [
           {
-            "source": "Vampires",
+            "source": "Noddism",
             "value": 1,
             "paths": [
               "skills.occult"
@@ -339,7 +339,7 @@
       "generation": ""
     },
     "hunger": {
-      "value": 1,
+      "value": 3,
       "max": 5
     },
     "disciplines": {
@@ -689,20 +689,68 @@
     },
     "experiences": [
       {
-        "id": "daMsBzcp",
-        "name": "Character Creation Neo.",
-        "value": 15,
-        "timestamp": 1762328122858
+        "id": "9goOkC8D",
+        "name": "2026-03-31",
+        "value": 1,
+        "timestamp": 1775009766398
+      },
+      {
+        "id": "1Raw1NnH",
+        "name": "2026-03-24",
+        "value": 1,
+        "timestamp": 1774405257538
+      },
+      {
+        "id": "YFUiqNyP",
+        "name": "2026-03-17",
+        "value": 1,
+        "timestamp": 1773802504728
+      },
+      {
+        "id": "bEzDOaHM",
+        "name": "2026-03-10",
+        "value": 1,
+        "timestamp": 1773197788297
+      },
+      {
+        "id": "qGDxKqWK",
+        "name": "2026-03-03",
+        "value": 1,
+        "timestamp": 1772601887282
+      },
+      {
+        "id": "pGPum5Yz",
+        "name": "2026-02-25",
+        "value": 1,
+        "timestamp": 1771994266463
+      },
+      {
+        "id": "G8RFlaAA",
+        "name": "2026-02-17",
+        "value": 1,
+        "timestamp": 1771384931815
       },
       {
         "id": "tDdwaAEC",
         "name": "Malkav's Will",
         "value": -15,
         "timestamp": 1762328137654
+      },
+      {
+        "id": "daMsBzcp",
+        "name": "Character Creation Neo.",
+        "value": 15,
+        "timestamp": 1762328122858
+      },
+      {
+        "id": "FtYEadtN",
+        "name": "XP Bonus",
+        "value": 1,
+        "timestamp": 1775009966805
       }
     ],
     "selectedDiscipline": "auspex",
-    "selectedDisciplinePower": "WJwk5WU6L0sPmYja",
+    "selectedDisciplinePower": "HsariJyOc9XC4qbe",
     "description": "",
     "bonuses": {},
     "selectedGift": "",
@@ -875,12 +923,12 @@
         "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.5gUFnvi0GFfyIEl2",
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.350",
-        "systemId": "vtm5e",
-        "systemVersion": "5.2.2",
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
         "createdTime": 1762320681228,
-        "modifiedTime": 1762718770462,
-        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+        "modifiedTime": 1775007193937,
+        "lastModifiedBy": "eSzVRD7CqPVwNKrz"
       },
       "ownership": {
         "default": 0
@@ -911,7 +959,7 @@
         },
         "cost": 1,
         "macroid": "",
-        "selected": true,
+        "selected": false,
         "dataItemId": ""
       },
       "effects": [],
@@ -921,12 +969,12 @@
         "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.W6UmkY8jGLF6nA5G",
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.350",
-        "systemId": "vtm5e",
-        "systemVersion": "5.2.2",
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
         "createdTime": 1762320707370,
-        "modifiedTime": 1762718785209,
-        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+        "modifiedTime": 1775007202443,
+        "lastModifiedBy": "eSzVRD7CqPVwNKrz"
       },
       "ownership": {
         "default": 0
@@ -967,12 +1015,12 @@
         "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.xCCtEroRVLAw314V",
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.350",
-        "systemId": "vtm5e",
-        "systemVersion": "5.2.2",
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
         "createdTime": 1762320725655,
-        "modifiedTime": 1762718785218,
-        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+        "modifiedTime": 1773184754879,
+        "lastModifiedBy": "eSzVRD7CqPVwNKrz"
       },
       "ownership": {
         "default": 0
@@ -1003,7 +1051,7 @@
         },
         "cost": 1,
         "macroid": "",
-        "selected": false,
+        "selected": true,
         "dataItemId": ""
       },
       "effects": [],
@@ -1013,12 +1061,12 @@
         "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.disciplines.Item.iW0Age4PHhRqVOKi",
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.350",
-        "systemId": "vtm5e",
-        "systemVersion": "5.2.2",
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
         "createdTime": 1762322411302,
-        "modifiedTime": 1762718776878,
-        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+        "modifiedTime": 1775007202435,
+        "lastModifiedBy": "eSzVRD7CqPVwNKrz"
       },
       "ownership": {
         "default": 0
@@ -1258,47 +1306,6 @@
       }
     },
     {
-      "folder": "ssc0xboCLq8X00rA",
-      "name": "Mask",
-      "type": "feature",
-      "_id": "IhDEiW4Ekbou2rNV",
-      "img": "systems/wod5e/assets/icons/items/discipline.png",
-      "system": {
-        "description": "<p>• You have a good fake identity, including a credit card, bank account, credit history, birth certificate, etc., all in your Mask’s name. You can pass a state or provincial-level background check.</p><p>•• Your Mask can pass a background check with the national police: FBI, Scotland Yard, or the equivalent. If you have a military or intelligence record, it has been classified.</p>",
-        "bonuses": [],
-        "source": {
-          "book": "",
-          "page": ""
-        },
-        "uses": {
-          "max": 0,
-          "current": 0,
-          "enabled": false
-        },
-        "featuretype": "background",
-        "points": 1,
-        "macroid": "",
-        "dataItemId": ""
-      },
-      "effects": [],
-      "sort": 0,
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.advantages-flaws.Item.Zg8x0Snq7bU4gZzi",
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.351",
-        "systemId": "vtm5e",
-        "systemVersion": "5.2.2",
-        "createdTime": 1762450337463,
-        "modifiedTime": 1767040553545,
-        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
-      },
-      "ownership": {
-        "default": 0
-      }
-    },
-    {
       "name": "••• Across the Web",
       "type": "feature",
       "_id": "Iph3ZCsiF0Z2GbDB",
@@ -1459,7 +1466,48 @@
         "systemId": "wod5e",
         "systemVersion": "5.3.14",
         "createdTime": 1771377606848,
-        "modifiedTime": 1771377606848,
+        "modifiedTime": 1775009949229,
+        "lastModifiedBy": "PKLSX1YZ8yLS41GA"
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "C8mZ006mbKxfWkKR",
+      "name": "Resources",
+      "type": "feature",
+      "_id": "mgqpHzJts1RD0nFG",
+      "img": "systems/wod5e/assets/icons/items/discipline.png",
+      "system": {
+        "description": "<p>This Background describes your Resources. These benefits are not necessarily financial in nature and are rarely completely liquid, but you can often sell them to gain money. It could take weeks or even months to do so, depending on how much needs to be sold. Especially as the Second Inquisition closes down Kindred bank accounts, vampires increasingly return to holding their Resources in cash – or in gold, art, narcotics, guns, and slaves. </p><p>Dots of Resources provide an income for you to maintain your standard of unliving, but you must detail the source of your income and the form this Background takes. After all, it might dry up, get stolen, or otherwise vanish during the chronicle</p><p>• Paycheck to paycheck lifestyle</p><p>•• Middle-class lifestyle</p><p>••• Upper-class lifestyle</p><p>•••• Wealthy lifestyle</p><p>••••• Ultra-rich lifestyle</p>",
+        "bonuses": [],
+        "source": {
+          "book": "",
+          "page": ""
+        },
+        "uses": {
+          "max": 0,
+          "current": 0,
+          "enabled": false
+        },
+        "featuretype": "background",
+        "points": 1,
+        "macroid": "",
+        "dataItemId": ""
+      },
+      "effects": [],
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.vampire-the-masquerade-5e-compendium.advantages-flaws.Item.kGbzHWqAVV16ATRW",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "wod5e",
+        "systemVersion": "5.3.14",
+        "createdTime": 1773787587107,
+        "modifiedTime": 1773787588688,
         "lastModifiedBy": "PKLSX1YZ8yLS41GA"
       },
       "ownership": {
@@ -1491,7 +1539,7 @@
     "systemId": "wod5e",
     "systemVersion": "5.3.14",
     "createdTime": 1762313212486,
-    "modifiedTime": 1771377629344,
+    "modifiedTime": 1775009993805,
     "lastModifiedBy": "PKLSX1YZ8yLS41GA"
   },
   "ownership": {
