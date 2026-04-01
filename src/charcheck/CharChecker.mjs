@@ -75,8 +75,8 @@ const character = JSON.parse(data);
 
 console.log(color(consoleColors.green, `Char Checker v${CONFIG.version}`));
 
-if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(character._stats.systemVersion)) {
-    console.log(color(consoleColors.red, `Incompatible versions, need to update importer (template: ${character._stats.systemVersion}, importer: ${CONFIG.version}).`));
+if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(character._stats.exportSource.systemVersion)) {
+    console.log(color(consoleColors.red, `Incompatible versions, need to update importer (character: ${character._stats.exportSource.systemVersion}, importer: ${CONFIG.version}).`));
     process.exit();
 }
 
@@ -85,8 +85,8 @@ const MANIFEST_URL = 'https://raw.githubusercontent.com/WoD5E-Developers/wod5e/r
 let dateManifest = new Date('2000-01-01');
 if (CONFIG.debug_level > 0) console.log({ dateManifest: dateManifest });
 try {
-    await fs.access('./src/charcheck/system.json');
-    dateManifest = statSync('./src/charcheck/system.json').mtime;
+    await fs.access('./src/charcheck/data/system.json');
+    dateManifest = statSync('./src/charcheck/data/system.json').mtime;
 } catch (error) {
     console.error(error);
 }
@@ -96,7 +96,7 @@ if (CONFIG.force_download || new Date() - dateManifest > (24 * 3600000)) {
     await fs.writeFile('./src/charcheck/data/system.json', JSON.stringify(manifest));
     console.log(color(consoleColors.gray, `${CONFIG.force_download ? 'forced manifest download' : 'manifest cached outdated'}, caching ${new Date()}.`));
 } else {
-    manifest = JSON.parse(await fs.readFile('./src/charcheck/system.json', 'utf-8'));
+    manifest = JSON.parse(await fs.readFile('./src/charcheck/data/system.json', 'utf-8'));
     console.log(color(consoleColors.gray, `manifest cached ${dateManifest}.`));
 }
 if (CONFIG.debug_level > 0) console.log(manifest);
