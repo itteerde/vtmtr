@@ -254,6 +254,7 @@ function checkBalanced() {
  */
 function checkSpecialist() {
 
+    let fours = 0
     let threes = 0
     let twos = 0
     let ones = 0
