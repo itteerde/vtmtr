@@ -120,6 +120,9 @@ if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(manifest.version)) {
 
 //console.log(character);
 
+/** 
+ * check for one Attribute at 4; three Attributes at 3; four Attributes at 2; one Attribute at 1.
+ */
 function checkAttributes() {
 
     let fours = 0
@@ -145,22 +148,150 @@ function checkAttributes() {
         });
 
     if (fours !== 1) {
-        throw new Error(`Must have only one attribute withe the value of four; there was ${fours}.`);
+        throw new Error(`Must have only one Attribute with a value of four; there was ${fours}.`);
 
     }
 
     if (threes !== 3) {
-        throw new Error(`Must have only three attributes withe the value of three; there was ${threes}.`);
+        throw new Error(`Must have only three Attributes with a value of three; there was ${threes}.`);
 
     }
 
     if (twos !== 4) {
-        throw new Error(`Must have only four attributes withe the value of two; there was ${twos}.`);
+        throw new Error(`Must have only four Attributes with a value of two; there was ${twos}.`);
 
     }
 
     if (ones !== 1) {
-        throw new Error(`Must have only one attribute withe the value of one; there was ${ones}.`);
+        throw new Error(`Must have only one Attribute with a value of one; there was ${ones}.`);
+
+    }
+    return true
+}
+
+/** 
+ * Check jackOfAllTrades: one Skill at 3; eight Skills at 2; ten Skills at 1
+ */
+function checkJackOfAllTrades() {
+
+    let threes = 0
+    let twos = 0
+    let ones = 0
+
+    Object.values(character.system.attributes)
+        .map(attribute => attribute.value)
+        .forEach((currentElement) => {
+            if (currentElement === 3) {
+                threes++;
+            }
+            if (currentElement === 2) {
+                twos++;
+            }
+            if (currentElement === 1) {
+                ones++;
+            }
+        });
+
+    if (threes !== 1) {
+        throw new Error(`Must have only one Skill with a value of three; there was ${threes}.`);
+
+    }
+
+    if (twos !== 8) {
+        throw new Error(`Must have only eight Skills a the value of two; there was ${twos}.`);
+
+    }
+
+    if (ones !== 10) {
+        throw new Error(`Must have only ten Skills with a value of one; there was ${ones}.`);
+
+    }
+    return true
+}
+
+/**
+ * Check balanced: three Skills at 3; five Skills at 2; seven Skills at 1
+ */
+function checkBalanced() {
+
+    let threes = 0
+    let twos = 0
+    let ones = 0
+
+    Object.values(character.system.attributes)
+        .map(attribute => attribute.value)
+        .forEach((currentElement) => {
+            if (currentElement === 3) {
+                threes++;
+            }
+            if (currentElement === 2) {
+                twos++;
+            }
+            if (currentElement === 1) {
+                ones++;
+            }
+        });
+
+    if (threes !== 3) {
+        throw new Error(`Must have only three Skills with a value of three; there was ${threes}.`);
+
+    }
+
+    if (twos !== 5) {
+        throw new Error(`Must have only five Skills a the value of two; there was ${twos}.`);
+
+    }
+
+    if (ones !== 7) {
+        throw new Error(`Must have only seven Skills with a value of one; there was ${ones}.`);
+
+    }
+    return true
+}
+
+/**
+ * Check specialist: one Skill at 4; three Skills at 3; three Skills at 2; three Skills at 1 
+ */
+function checkSpecialist() {
+
+    let threes = 0
+    let twos = 0
+    let ones = 0
+
+    Object.values(character.system.attributes)
+        .map(attribute => attribute.value)
+        .forEach((currentElement) => {
+            if (currentElement === 4) {
+                fours++;
+            }
+            if (currentElement === 3) {
+                threes++;
+            }
+            if (currentElement === 2) {
+                twos++;
+            }
+            if (currentElement === 1) {
+                ones++;
+            }
+        });
+
+    if (threes !== 1) {
+        throw new Error(`Must have only one Skill with a value of four; there was ${fours}.`);
+
+    }
+
+    if (threes !== 3) {
+        throw new Error(`Must have only three Skills with a value of three; there was ${threes}.`);
+
+    }
+
+    if (twos !== 3) {
+        throw new Error(`Must have only three Skills a the value of two; there was ${twos}.`);
+
+    }
+
+    if (ones !== 3) {
+        throw new Error(`Must have only three Skills with a value of one; there was ${ones}.`);
 
     }
     return true
@@ -178,5 +309,3 @@ try {
 }
 
 //console.log(checkAttributes())
-
-//set Health = Stamina + 3; Willpower = Composure + Resolve.
