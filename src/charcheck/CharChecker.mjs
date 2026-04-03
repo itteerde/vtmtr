@@ -1,3 +1,6 @@
+import util from 'node:util';
+util.inspect.defaultOptions.breakLength = 150;
+
 import fs from 'node:fs/promises';
 import { statSync } from 'node:fs';
 import { color, consoleColors } from '../lib/colorize.mjs';
