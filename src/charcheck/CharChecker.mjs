@@ -3,7 +3,7 @@ import { statSync } from 'node:fs';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
 const CONFIG = {
-    version: '5.3.15.1',
+    version: '5.3.16.1',
     debug_level: 0,
     force_download: false,
     ignore_versions: false,
@@ -115,7 +115,7 @@ if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(manifest.version)) {
     process.exit();
 }
 
-console.log(character);
+//console.log(character);
 
 function checkAttributes() {
 
@@ -163,8 +163,17 @@ function checkAttributes() {
     return true
 }
 
-checkAttributes()
+console.log();
+try {
+    checkAttributes();
+    console.log(color(consoleColors.green, `checkAttributes: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkAttributes: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
 
-console.log(checkAttributes())
+//console.log(checkAttributes())
 
 //set Health = Stamina + 3; Willpower = Composure + Resolve.
