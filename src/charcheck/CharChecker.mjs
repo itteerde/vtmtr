@@ -125,10 +125,10 @@ if (!CONFIG.ignore_versions && !CONFIG.version.startsWith(manifest.version)) {
  */
 function checkAttributes() {
 
-    let fours = 0
-    let threes = 0
-    let twos = 0
-    let ones = 0
+    let fours = 0;
+    let threes = 0;
+    let twos = 0;
+    let ones = 0;
 
     Object.values(character.system.attributes)
         .map(attribute => attribute.value)
@@ -169,14 +169,35 @@ function checkAttributes() {
     return true
 }
 
+/**
+ * check Health = Stamina + 3
+ */
+function checkHealth() {
+
+    if (character.system.health.max !== character.system.attributes.stamina.value + 3) {
+        throw new Error(`Health must equal Stamina + 3.`)
+    }
+    return true
+}
+
+/**
+ * check Willpower = Composure + Resolve.
+ */
+function checkWillpower() {
+    if (character.system.willpower.max !== character.system.attributes.composure.value + character.system.attributes.resolve.value) {
+        throw new Error(`Willpower must equal Composure + Resolve.`)
+    }
+    return true
+}
+
 /** 
  * Check jackOfAllTrades: one Skill at 3; eight Skills at 2; ten Skills at 1
  */
 function checkJackOfAllTrades() {
 
-    let threes = 0
-    let twos = 0
-    let ones = 0
+    let threes = 0;
+    let twos = 0;
+    let ones = 0;
 
     Object.values(character.system.skills)
         .map(skills => skills.value)
@@ -214,9 +235,9 @@ function checkJackOfAllTrades() {
  */
 function checkBalanced() {
 
-    let threes = 0
-    let twos = 0
-    let ones = 0
+    let threes = 0;
+    let twos = 0;
+    let ones = 0;
 
     Object.values(character.system.skills)
         .map(skills => skills.value)
@@ -254,10 +275,10 @@ function checkBalanced() {
  */
 function checkSpecialist() {
 
-    let fours = 0
-    let threes = 0
-    let twos = 0
-    let ones = 0
+    let fours = 0;
+    let threes = 0;
+    let twos = 0;
+    let ones = 0;
 
     Object.values(character.system.skills)
         .map(skills => skills.value)
@@ -276,7 +297,7 @@ function checkSpecialist() {
             }
         });
 
-    if (threes !== 1) {
+    if (fours !== 1) {
         throw new Error(`Must have only one Skill with a value of four; there was ${fours}.`);
 
     }
@@ -304,6 +325,28 @@ try {
     console.log(color(consoleColors.green, `checkAttributes: success`));
 } catch (error) {
     console.log(color(consoleColors.red, `checkAttributes: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
+
+console.log();
+try {
+    checkHealth();
+    console.log(color(consoleColors.green, `checkHealth: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkHealth: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
+
+console.log();
+try {
+    checkWillpower();
+    console.log(color(consoleColors.green, `checkWillpower: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkWillpower: failure`));
     console.error(error);
 } finally {
     // nothing to do here, just for learning
@@ -341,5 +384,3 @@ try {
 } finally {
     // nothing to do here, just for learning
 }
-
-//console.log(checkAttributes())

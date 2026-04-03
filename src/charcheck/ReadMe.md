@@ -1,8 +1,8 @@
 //check for one Attribute at 4; three Attributes at 3; four Attributes at 2; one Attribute at 1. --done
 
-//set Health = Stamina + 3; Willpower = Composure + Resolve.
+//set Health = Stamina + 3; Willpower = Composure + Resolve. --toDo
 
-//check either jackOfAllTrades One Skill at 3; eight Skills at 2; ten Skills at 1 || balanced Three Skills at 3; five Skills at 2; seven Skills at 1 || specialist: One Skill at 4; three Skills at 3; three Skills at 2; three Skills at 1
+//check either jackOfAllTrades One Skill at 3; eight Skills at 2; ten Skills at 1 || balanced Three Skills at 3; five Skills at 2; seven Skills at 1 || specialist: One Skill at 4; three Skills at 3; three Skills at 2; three Skills at 1 --done
 
 //check that all Academics, Craft, Performance, and Science Skills have one speciality
 
