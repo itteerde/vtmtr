@@ -178,8 +178,8 @@ function checkJackOfAllTrades() {
     let twos = 0
     let ones = 0
 
-    Object.values(character.system.attributes)
-        .map(attribute => attribute.value)
+    Object.values(character.system.skills)
+        .map(skills => skills.value)
         .forEach((currentElement) => {
             if (currentElement === 3) {
                 threes++;
@@ -218,8 +218,8 @@ function checkBalanced() {
     let twos = 0
     let ones = 0
 
-    Object.values(character.system.attributes)
-        .map(attribute => attribute.value)
+    Object.values(character.system.skills)
+        .map(skills => skills.value)
         .forEach((currentElement) => {
             if (currentElement === 3) {
                 threes++;
@@ -258,8 +258,8 @@ function checkSpecialist() {
     let twos = 0
     let ones = 0
 
-    Object.values(character.system.attributes)
-        .map(attribute => attribute.value)
+    Object.values(character.system.skills)
+        .map(skills => skills.value)
         .forEach((currentElement) => {
             if (currentElement === 4) {
                 fours++;
@@ -303,6 +303,39 @@ try {
     console.log(color(consoleColors.green, `checkAttributes: success`));
 } catch (error) {
     console.log(color(consoleColors.red, `checkAttributes: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
+
+console.log();
+try {
+    checkJackOfAllTrades();
+    console.log(color(consoleColors.green, `checkJackOfAllTrades: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkJackOfAllTrades: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
+
+console.log();
+try {
+    checkBalanced();
+    console.log(color(consoleColors.green, `checkBalanced: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkBalanced: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
+
+console.log();
+try {
+    checkSpecialist();
+    console.log(color(consoleColors.green, `checkSpecialist: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkSpecialist: failure`));
     console.error(error);
 } finally {
     // nothing to do here, just for learning
