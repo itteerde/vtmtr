@@ -149,23 +149,20 @@ function checkAttributes() {
 
     if (fours !== 1) {
         throw new Error(`Must have only one Attribute with a value of four; there was ${fours}.`);
-
     }
 
     if (threes !== 3) {
         throw new Error(`Must have only three Attributes with a value of three; there was ${threes}.`);
-
     }
 
     if (twos !== 4) {
         throw new Error(`Must have only four Attributes with a value of two; there was ${twos}.`);
-
     }
 
     if (ones !== 1) {
         throw new Error(`Must have only one Attribute with a value of one; there was ${ones}.`);
-
     }
+
     return true
 }
 
@@ -177,6 +174,7 @@ function checkHealth() {
     if (character.system.health.max !== character.system.attributes.stamina.value + 3) {
         throw new Error(`Health must equal Stamina + 3.`)
     }
+
     return true
 }
 
@@ -187,6 +185,7 @@ function checkWillpower() {
     if (character.system.willpower.max !== character.system.attributes.composure.value + character.system.attributes.resolve.value) {
         throw new Error(`Willpower must equal Composure + Resolve.`)
     }
+
     return true
 }
 
@@ -198,6 +197,7 @@ function checkJackOfAllTrades() {
     let threes = 0;
     let twos = 0;
     let ones = 0;
+    let zeroes = 0;
 
     Object.values(character.system.skills)
         .map(skills => skills.value)
@@ -211,22 +211,27 @@ function checkJackOfAllTrades() {
             if (currentElement === 1) {
                 ones++;
             }
+            if (currentElement === 0) {
+                zeroes++;
+            }
         });
 
     if (threes !== 1) {
         throw new Error(`Must have only one Skill with a value of three; there was ${threes}.`);
-
     }
 
     if (twos !== 8) {
         throw new Error(`Must have only eight Skills a the value of two; there was ${twos}.`);
-
     }
 
     if (ones !== 10) {
         throw new Error(`Must have only ten Skills with a value of one; there was ${ones}.`);
-
     }
+
+    if (zeroes !== 8) {
+        throw new Error(`Must have only eight Skills with a value of zero; there was ${zeroes}.`);
+    }
+
     return true
 }
 
@@ -238,6 +243,7 @@ function checkBalanced() {
     let threes = 0;
     let twos = 0;
     let ones = 0;
+    let zeroes = 0;
 
     Object.values(character.system.skills)
         .map(skills => skills.value)
@@ -251,22 +257,27 @@ function checkBalanced() {
             if (currentElement === 1) {
                 ones++;
             }
+            if (currentElement === 0) {
+                zeroes++;
+            }
         });
 
     if (threes !== 3) {
         throw new Error(`Must have only three Skills with a value of three; there was ${threes}.`);
-
     }
 
     if (twos !== 5) {
         throw new Error(`Must have only five Skills a the value of two; there was ${twos}.`);
-
     }
 
     if (ones !== 7) {
         throw new Error(`Must have only seven Skills with a value of one; there was ${ones}.`);
-
     }
+
+    if (zeroes !== 12) {
+        throw new Error(`Must have only twelve Skills with a value of zero; there was ${zeroes}.`);
+    }
+
     return true
 }
 
@@ -279,6 +290,7 @@ function checkSpecialist() {
     let threes = 0;
     let twos = 0;
     let ones = 0;
+    let zeroes = 0;
 
     Object.values(character.system.skills)
         .map(skills => skills.value)
@@ -295,28 +307,78 @@ function checkSpecialist() {
             if (currentElement === 1) {
                 ones++;
             }
+            if (currentElement === 0) {
+                zeroes++;
+            }
         });
 
     if (fours !== 1) {
         throw new Error(`Must have only one Skill with a value of four; there was ${fours}.`);
-
     }
 
     if (threes !== 3) {
         throw new Error(`Must have only three Skills with a value of three; there was ${threes}.`);
-
     }
 
     if (twos !== 3) {
         throw new Error(`Must have only three Skills a the value of two; there was ${twos}.`);
-
     }
 
     if (ones !== 3) {
         throw new Error(`Must have only three Skills with a value of one; there was ${ones}.`);
+    }
+
+    if (zeroes !== 17) {
+        throw new Error(`Must have only seventeen Skills with a value of zero; there was ${zeroes}.`);
+    }
+
+    return true
+}
+
+/**
+ * check that all Academics, Craft, Performance, and Science Skills have at least one speciality and that the total number of specialities = (Academics, Craft, Performance, and Science +1)
+ */
+function checkSpecialities() {
+
+    let specialitiesAcademics = 0;
+    let specialitiesCraft = 0;
+    let specialitiesPerformances = 0;
+    let specialitiesScience = 0;
+    let specialitiesBaseTotal = 0;
+    let specialitiesTotal = 0
+
+    if (character.system.skills.academics.value > 0) {
+        specialitiesAcademics = character.system.skills.academics.bonuses.length;
+        specialitiesBaseTotal += specialitiesAcademics;
+    }
+
+    if (character.system.skills.craft.value > 0) {
+        specialitiesCraft = character.system.skills.craft.bonuses.length;
+        specialitiesBaseTotal += specialitiesCraft;
+    }
+
+    if (character.system.skills.performance.value > 0) {
+        specialitiesPerformances = character.system.skills.performance.bonuses.length;
+        specialitiesBaseTotal += specialitiesPerformances;
+    }
+
+    if (character.system.skills.science.value > 0) {
+        specialitiesScience = character.system.skills.science.bonuses.length;
+        specialitiesBaseTotal += specialitiesScience;
+    }
+
+    Object.values(character.system.skills)
+        .forEach((currentElement) => {
+            specialitiesTotal += currentElement.bonuses.length
+        })
+
+    if (specialitiesBaseTotal !== specialitiesTotal + 1) {
+        throw new Error(`This character does not have the right number of specialities.`);
 
     }
+
     return true
+
 }
 
 console.log();
@@ -380,6 +442,17 @@ try {
     console.log(color(consoleColors.green, `checkSpecialist: success`));
 } catch (error) {
     console.log(color(consoleColors.red, `checkSpecialist: failure`));
+    console.error(error);
+} finally {
+    // nothing to do here, just for learning
+}
+
+console.log();
+try {
+    checkSpecialities();
+    console.log(color(consoleColors.green, `checkSpecialities: success`));
+} catch (error) {
+    console.log(color(consoleColors.red, `checkSpecialities: failure`));
     console.error(error);
 } finally {
     // nothing to do here, just for learning
