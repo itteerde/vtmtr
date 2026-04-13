@@ -1,22 +1,21 @@
-Sire: Altamira
-Embraced: 1755 (Born 1717)
-Ambition: Take back Chicago
-Convictions: None may rule over me
-Touchstones: Geraldine, his devoted mortal ghoul
-of two centuries
+Sire: Edgar Drummond
+Embraced: 1939 (Born 1911)
+Ambition: Be seen as more than a liability
+Convictions: None
+Touchstones: None
 Humanity: 3
-Generation: 6th
-Blood Potency: 4
-Attributes: Strength 4, Dexterity 4, Stamina 4; Charisma
-3, Manipulation 3, Composure 4; Intelligence
-3; Wits 4; Resolve 5
-Secondary Attributes: Health 7, Willpower 9
-Skills: Athletics 2, Brawl (Armed Opponents) 4, Firearms
-2, Larceny 2, Melee 4, Stealth 2, Survival 3;
-Etiquette 2, Intimidation (Stare Down) 4, Leadership
-(Command) 4, Persuasion (Bargaining) 3, Streetwise
-2, Subterfuge 2; Awareness (Ambushes) 4, Politics
-(Tyranny) 2, Science 2, Technology (Computers) 2
-Disciplines: Auspex 2, Celerity 4, Fortitude 3,
-Potence 4, Presence 4
+Generation: 9th
+Blood Potency: 2
+Attributes: Strength 2, Dexterity 3, Stamina 3; Charisma
+4, Manipulation 4, Composure 3; Intelligence
+4, Wits 3, Resolve 2
+Secondary Attributes: Health 5, Willpower 5
+Skills: Athletics 1, Brawl 1, Craft (Moonshine) 2,
+Drive 2, Firearms 2, Larceny (Smuggling) 4, Stealth
+1; Etiquette 3, Insight 1, Intimidation 1, Leadership
+(Criminals) 4, Persuasion 3, Streetwise (Fire Department)
+2, Subterfuge 3; Academics (City Infrastructure)
+2, Awareness 1, Finance 3, Politics 1
+Disciplines: Celerity 1, Dominate 3, Fortitude 2,
+Presence 3
 EndOfFile
