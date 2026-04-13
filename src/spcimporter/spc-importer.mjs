@@ -4,7 +4,7 @@ import { color, consoleColors } from '../lib/colorize.mjs';
 
 const CURRENT_DATE = new Date('2026-01-01'); // the date in world, used to calculate age relative to the game world
 const CONFIG = {
-    version: '5.3.14.1',
+    version: '5.3.16.1',
     debug_level: 0,
     force_download: false,
     ignore_versions: false
