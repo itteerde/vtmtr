@@ -6,7 +6,7 @@ import { statSync } from 'node:fs';
 import { color, consoleColors } from '../lib/colorize.mjs';
 
 const CONFIG = {
-    version: '5.3.16.1',
+    version: '5.3.19.1',
     debug_level: 0,
     force_download: false,
     ignore_versions: false,

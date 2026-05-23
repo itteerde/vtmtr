@@ -1,21 +1,20 @@
-Sire: Edgar Drummond
-Embraced: 1939 (Born 1911)
-Ambition: Be seen as more than a liability
-Convictions: None
-Touchstones: None
-Humanity: 3
+Sire: Kristian
+Embraced: 2011 (Born 1976)
+Ambition: Find my sire
+Convictions: I must protect my colleagues whatever
+the cost
+Touchstones: Elena Heath, DEA colleague
+Humanity: 6
 Generation: 9th
 Blood Potency: 2
-Attributes: Strength 2, Dexterity 3, Stamina 3; Charisma
-4, Manipulation 4, Composure 3; Intelligence
-4, Wits 3, Resolve 2
+Attributes: Strength 4, Dexterity 3, Stamina 2; Charisma
+3, Manipulation 2, Composure 2; Intelligence
+2, Wits 2, Resolve 3
 Secondary Attributes: Health 5, Willpower 5
-Skills: Athletics 1, Brawl 1, Craft (Moonshine) 2,
-Drive 2, Firearms 2, Larceny (Smuggling) 4, Stealth
-1; Etiquette 3, Insight 1, Intimidation 1, Leadership
-(Criminals) 4, Persuasion 3, Streetwise (Fire Department)
-2, Subterfuge 3; Academics (City Infrastructure)
-2, Awareness 1, Finance 3, Politics 1
-Disciplines: Celerity 1, Dominate 3, Fortitude 2,
-Presence 3
+Skills: Athletics 3, Brawl 3, Drive 1, Melee 2, Firearms
+(Pistol) 3, Stealth 2; Animal Ken (Cockroaches)
+2, Etiquette 1, Insight 1, Intimidation 3, Streetwise 2,
+Subterfuge 1; Academics (Information Systems, Law)
+2, Awareness 3, Investigation (Drugs Trade) 3
+Disciplines: Animalism 3, Obfuscate 2
 EndOfFile

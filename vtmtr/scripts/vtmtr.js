@@ -273,8 +273,8 @@ Hooks.on("ready", function () {
         }
     }
 
-    CONFIG.statusEffects.push({ icon: 'systems/wod5e/assets/icons/dice/vampire/success.png', id: 'discipline_used', name: 'Discipline Used' });
-    CONFIG.statusEffects.push({ icon: 'icons/svg/cancel.svg', id: 'turn_taken', name: 'Turn Taken' });
+    CONFIG.statusEffects.push({ img: 'systems/wod5e/assets/icons/dice/vampire/success.png', id: 'discipline_used', name: 'Discipline Used' });
+    CONFIG.statusEffects.push({ img: 'icons/svg/cancel.svg', id: 'turn_taken', name: 'Turn Taken' });
 });
 
 console.log(`Tablerules has been loaded (${performance.now() - start_time}ms).`);
