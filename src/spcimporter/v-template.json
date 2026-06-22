@@ -269,20 +269,20 @@
   "folder": null,
   "flags": {},
   "_stats": {
-    "coreVersion": "14.359",
+    "coreVersion": "14.364",
     "systemId": "wod5e",
-    "systemVersion": "5.3.16",
-    "createdTime": 1776113072038,
-    "modifiedTime": 1776113072040,
+    "systemVersion": "5.3.19",
+    "createdTime": 1782153841528,
+    "modifiedTime": 1782153841534,
     "lastModifiedBy": "PKLSX1YZ8yLS41GA",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": {
       "worldId": "vtm5e",
-      "uuid": "Actor.CT9tVuzlXgWo7JnU",
-      "coreVersion": "14.359",
+      "uuid": "Actor.1vmZtxirBI7pNMc8",
+      "coreVersion": "14.364",
       "systemId": "wod5e",
-      "systemVersion": "5.3.16"
+      "systemVersion": "5.3.19"
     }
   },
   "ownership": {
