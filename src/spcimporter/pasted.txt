@@ -1,22 +1,28 @@
-Sire: Annais Mazet
-Embraced: 1981 (Born 1963)
-Ambition: To gain acceptance for what I am
-Convictions: Study and books are sacred
-Touchstones: Audrey Pendle — librarian and object
-of affection
-Humanity: 6
-Generation: 12th
+Sire: Melvyn Ramsay
+Embraced: 1982 (Born 1954)
+Ambition: Use Honor Mercer
+as a weapon against the
+Camarilla
+Convictions: Always indulge
+one’s vices when possible
+Touchstones: Stacy Willis —
+mortal aide to Freddie’s church
+Humanity: 3
+Generation: 11th
 Blood Potency: 2
-Attributes: Strength 1, Dexterity 2, Stamina 2; Charisma
-2, Manipulation 3, Composure 4; Intelligence
-4, Wits 3, Resolve 3
-Secondary Attributes: Health 5, Willpower 7
-Skills: Drive 2, Larceny 1, Stealth 3; Etiquette 3,
-Insight 4, Intimidation 1, Leadership 3, Performance
-(Lecturing) 2, Persuasion 2, Subterfuge 4; Academics
-(Renaissance Philosophy) 3, Awareness 4, Investigation
-3, Occult (Alchemy) 4, Politics 2, Science
-(Chemistry) 3
-Disciplines: Auspex 3, Blood Sorcery 3, Dominate
-2, Presence 1
+Attributes: Strength 3, Dexterity
+3, Stamina 2; Charisma 4,
+Manipulation 5, Composure 4;
+Intelligence 4, Wits 3, Resolve 3
+Secondary Attributes: Health
+5, Willpower 7
+Skills: Athletics 2, Brawl 1, Melee
+3, Stealth 2; Animal Ken 2,
+Etiquette 4, Insight (Weaknesses)
+4, Intimidation 3, Leadership
+(Cult) 4, Persuasion (Lovebombing) 5, Subterfuge 3; Academics (Psychology) 3,
+Awareness 2, Investigation 1, Medicine 3, Occult 2,
+Politics (Anarch) 2
+Disciplines: Animalism 2, Presence 3, Protean 3
+General Difficulties: 6/3
 EndOfFile

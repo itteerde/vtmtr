@@ -1,5 +1,5 @@
 {
-  "name": "Vampire",
+  "name": "Export",
   "type": "vampire",
   "img": "icons/svg/mystery-man.svg",
   "system": {
@@ -173,7 +173,7 @@
     "edges": {}
   },
   "prototypeToken": {
-    "name": "Vampire",
+    "name": "Export",
     "displayName": 0,
     "actorLink": true,
     "width": 1,
@@ -267,25 +267,25 @@
   "items": [],
   "effects": [],
   "folder": null,
+  "ownership": {
+    "default": 0
+  },
   "flags": {},
   "_stats": {
-    "coreVersion": "14.364",
+    "coreVersion": "14.367",
     "systemId": "wod5e",
-    "systemVersion": "5.3.19",
-    "createdTime": 1782153841528,
-    "modifiedTime": 1782153841534,
+    "systemVersion": "5.3.26",
+    "createdTime": 1787699957330,
+    "modifiedTime": 1787699957334,
     "lastModifiedBy": "PKLSX1YZ8yLS41GA",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": {
       "worldId": "vtm5e",
-      "uuid": "Actor.1vmZtxirBI7pNMc8",
-      "coreVersion": "14.364",
+      "uuid": "Actor.zmBEOaz7AZwVXeIH",
+      "coreVersion": "14.367",
       "systemId": "wod5e",
-      "systemVersion": "5.3.19"
+      "systemVersion": "5.3.26"
     }
-  },
-  "ownership": {
-    "default": 0
   }
 }
