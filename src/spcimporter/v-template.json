@@ -1,5 +1,4 @@
 {
-  "folder": "I6UyEQiQhws6u1Ca",
   "name": "Vampire",
   "type": "vampire",
   "img": "icons/svg/mystery-man.svg",
@@ -267,25 +266,26 @@
   },
   "items": [],
   "effects": [],
+  "folder": null,
   "ownership": {
     "default": 0
   },
   "flags": {},
   "_stats": {
-    "coreVersion": "14.367",
+    "coreVersion": "14.368",
     "systemId": "wod5e",
-    "systemVersion": "5.3.27",
-    "createdTime": 1788288341577,
-    "modifiedTime": 1788288341578,
+    "systemVersion": "5.3.28",
+    "createdTime": 1790115965119,
+    "modifiedTime": 1790115965123,
     "lastModifiedBy": "PKLSX1YZ8yLS41GA",
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": {
       "worldId": "vtm5e",
-      "uuid": "Actor.mAZMZwxmF6FY7XY1",
-      "coreVersion": "14.367",
+      "uuid": "Actor.mHg0ZFKztRyCodXv",
+      "coreVersion": "14.368",
       "systemId": "wod5e",
-      "systemVersion": "5.3.27"
+      "systemVersion": "5.3.28"
     }
   }
 }

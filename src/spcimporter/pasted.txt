@@ -1,20 +1,24 @@
-Sire: Peanut Whistle
-Embraced: 2018 (Born 1997)
-Ambition: Prove her worth to Milwaukee
-Convictions: Always help my friends
-Touchstones: Israel Rogowski, a personal friend
-and sometime fuck buddy
-Humanity: 6
-Generation: 15th
-Blood Potency: 0
-Attributes: Strength 2, Dexterity 3, Stamina 2; Charisma
-3, Manipulation 2, Composure 4; Intelligence
-3, Wits 2, Resolve 4
-Secondary Attributes: Health 5, Willpower 8
-Skills: Athletics 1, Craft (Painting) 4, Drive 2, Melee
-1, Survival 2; Animal Ken 1, Etiquette 2, Insight 3,
-Persuasion 2, Subterfuge 1; Academics (Art) 4,
-Awareness 2
-Disciplines: Thin-Blood Alchemy 1
-General Difficulties: 3/1
+Sire: Poisoned Lion
+Embraced: 1697 (Born 1629)
+Ambition: Return the Followers of Set to their former
+glory
+Convictions: Never allow a challenge to my faith to
+go unanswered
+Touchstones: Arnold Warner, mortal nurse and
+caregiver for Djedefre
+Humanity: 5
+Generation: 8th
+Blood Potency: 4
+Attributes: Strength 4, Dexterity 1, Stamina 4; Charisma
+5, Manipulation 4, Composure 5; Intelligence
+5, Wits 2, Resolve 4
+Secondary Attributes: Health 7, Willpower 9
+Skills: Athletics 1, Firearms 2, Melee (Dagger) 4,
+Stealth 3, Survival 4; Animal Ken 3, Etiquette 3,
+Insight (Vice) 5, Intimidation 4, Leadership (Cult) 5,
+Persuasion 3, Subterfuge 2; Academics (History) 4,
+Awareness 3, Occult (Church of Set) 4, Politics 1,
+Technology 1
+Disciplines: Obfuscate 4, Presence 4, Protean 3
+General Difficulties: 7/4
 EndOfFile
